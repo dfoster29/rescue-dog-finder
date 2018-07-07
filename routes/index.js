@@ -1,6 +1,9 @@
 const router = require("express").Router();
-const apiRoutes = require("./api");
+const petfinderResultRoutes = require("./api/petfinder")
+const googleResultRoutes = require("./api/google")
 
-router.use("/api", apiRoutes);
+router.use("/api", petfinderResultRoutes);
+router.use("/api", googleResultRoutes);
+
 
 module.exports = router;

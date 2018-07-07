@@ -3,16 +3,16 @@ const axios = require("axios");
 
 require("dotenv").config()
 
-// Matches with "/api/nyt"
 router
-  .route("/")
+  .route("/dogs")
   .get(function (req, res) {
-    console.log(req.query);
     
     axios
-      .get(`http://api.petfinder.com/my.method?format=json&key=${process.env.nytAPI}`, {params: req.query})
-      .then(function (articleData) {
-        res.json(articleData.data)
+      .get(`http://api.petfinder.com/pet.find?format=json&animal=dog&location=new jersey&breed=Beagle&age=Baby&key=${process.env.petfinderAPI}`, 
+      {
+      })
+      .then(function (dogSearch) {
+        res.json(dogSearch.data)
       })
       .catch(function(err) {
         console.log(err);
@@ -21,4 +21,22 @@ router
 
   })
 
+  router
+    .route("/breedlist")
+    .get(function (req, res) {
+      console.log("hit")
+      axios
+        .get(`http://api.petfinder.com/breed.list?format=json&key=${process.env.petfinderAPI}&animal=dog`)
+        .then(function (breedList) {
+          res.json(breedList.data);
+          console.log(breedList.data);
+        })
+        .catch(function(err) {
+          console.log(err);
+          res.json(err);
+        });
+        
+    })
+
 module.exports = router;
+
