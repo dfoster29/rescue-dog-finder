@@ -2,22 +2,22 @@ import React, {Component} from "react";
 
 class Home extends Component {
 
-  state = {
+  // state = {
 
-  }
+  // }
 
-  handleOnChange = event => {
-    const { name, value } = event.target;
+  // handleOnChange = event => {
+  //   const { name, value } = event.target;
 
-    this.setState({
-      [name]: value
-    });
-  }
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // }
 
   render() {
     return (
       <div>
-        
+
           <div className="jumbotron">
             <h1 className="text-center mb-4">Welcome to the Rescue Dog Finder</h1>
             <div className="container">

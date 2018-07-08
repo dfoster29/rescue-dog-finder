@@ -1,9 +1,15 @@
-import React from "react";
+import React, {Component} from "react";
+import SurveyQuestions from "./components/SurveyQuestions";
 
-const Survey = () => (
-  <div>
-    
-  </div>
-)
+class Survey extends Component {
+
+  render() {
+    return (
+      <div>
+        <SurveyQuestions />
+      </div>
+    )
+  }
+}
 
 export default Survey;
