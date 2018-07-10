@@ -14,10 +14,11 @@ router
     axios
       .get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?type=veterinary_care&radius=15000&keyword=pet_store&key=${process.env.googlePlacesAPI}`, 
       {
-        location: userLocation //latitude and longitude of user
+        location:  `${req.query.lat}, ${req.query.long}`
       })
       .then(function (vetOffices) {
-        res.json(vetOffices.data)
+        res.json(vetOffices.data);
+        console.log(vetOffices.data);
       })
       .catch(function(err) {
         console.log(err);

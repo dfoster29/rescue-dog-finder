@@ -14,7 +14,7 @@ router
     axios
       .get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?type=park&keyword=dog&radius=15000&keyword=pet_store&key=${process.env.googlePlacesAPI}`, 
       {
-        location: userLocation //latitude and longitude of user
+        location:  `${req.query.lat}, ${req.query.long}`
       })
       .then(function (dogParks) {
         res.json(dogParks.data);

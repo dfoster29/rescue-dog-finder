@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import SurveyQuestions from "./components/SurveyQuestions";
+import SurveyQuestions from "../components/SurveyQuestions";
 
 class Survey extends Component {
 

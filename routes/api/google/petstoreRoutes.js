@@ -12,9 +12,10 @@ router
     // convert zip code to lat and long
     
     axios
-      .get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.736854, -74.446376&radius=15000&type=pet_store&keyword=dog&key=${process.env.googlePlacesAPI}`, 
+      .get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?type=pet_store&keyword=dog&key=${process.env.googlePlacesAPI}`, 
       {
-        // location: "40.736854,-74.446376" //latitude and longitude of user
+        location:  `${req.query.lat}, ${req.query.long}`,
+        radius: `15000`
       })
       .then(function (petStores) {
         res.json(petStores.data);

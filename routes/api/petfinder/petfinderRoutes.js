@@ -8,8 +8,11 @@ router
   .get(function (req, res) {
     
     axios
-      .get(`http://api.petfinder.com/pet.find?format=json&animal=dog&location=new jersey&breed=Beagle&age=Baby&key=${process.env.petfinderAPI}`, 
+      .get(`http://api.petfinder.com/pet.find?format=json&animal=dog&key=${process.env.petfinderAPI}`, 
       {
+        // location: // zip code 
+        // breed: // breed name here,
+        // age: // dog age here
       })
       .then(function (dogSearch) {
         res.json(dogSearch.data)

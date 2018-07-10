@@ -4,8 +4,6 @@ import Navbar from "./components/Navbar";
 import Home from "./containers/Home";
 import Saved from "./containers/Saved";
 import Survey from "./containers/Survey";
-import Results from "./containers/Results";
-
 
 const App = () => (
   <Router>
@@ -13,9 +11,8 @@ const App = () => (
       <Navbar/>
       <Switch>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/saveddogs" component={Saved}/>
+        <Route exact path="/saved_dogs" component={Saved}/>
         <Route exact path="/survey" component={Survey}/>
-        <Route exact path="/results" component={Results}/>
         <Route render={() => (<h1 className="text-center">Page Not Found!</h1>)}/>
       </Switch>
     </div>
