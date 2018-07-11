@@ -1,0 +1,52 @@
+[
+  {
+    "question": "What is your previous dog experience?",
+    "id": 1,
+    "answers": ["have never had a dog", "have had a dog before", "have a dog now"]
+  },
+  {
+    "question": "Which best describes your current living situation?",
+    "id": 2,
+    "answers": ["apartment", "house with small yard", "house with large yard"]
+  },
+  {
+    "question": "Do any young children live in your home?",
+    "id": 3,
+    "answers": ["yes", "no"]
+  },
+  {
+    "question": "What amount of shedding will you tolerate?",
+    "id": 4,
+    "answers": ["none", "moderate shedding", "heavy or seasonal shedding"]
+  },
+  {
+    "question": "What amount of barking will you tolerate?",
+    "id": 5,
+    "answers": ["infrequent", "frequent"]
+  },
+  {
+    "question": "How active are you?",
+    "id": 6,
+    "answers": ["couch potato", "excercise here and there", "daily excerise"]
+  },
+  {
+    "question": "Are you willing to house train your new dog?",
+    "id": 7,
+    "answers": ["yes", "no"]
+  },
+  {
+    "question": "Do you want a dog that will fit in a carry-on?",
+    "id": 8,
+    "answers": ["yes", "no"]
+  },
+  {
+    "question": "question 9 here",
+    "id": 9,
+    "answers": ["answer 1", "answer 2", "answer 3"]
+  },
+  {
+    "question": "question 10 here",
+    "id": 10,
+    "answers": ["answer 1", "answer 2", "answer 3"]
+  }
+]

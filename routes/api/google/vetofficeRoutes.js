@@ -8,16 +8,21 @@ require("dotenv").config()
 router
   .route("/vetoffices")
   .get(function (req, res) {
-
-    // convert zip code to lat and long
     
     axios
-      .get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?type=veterinary_care&radius=15000&keyword=pet_store&key=${process.env.googlePlacesAPI}`, 
-      {
-        location:  `${req.query.lat}, ${req.query.long}`
+      .get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=${process.env.googlePlacesAPI}`, 
+      { 
+        params: {
+          location:  `${req.query.lat}, ${req.query.long}`,
+          type: "veterinary_care",
+          radius: 5000
+        }
       })
       .then(function (vetOffices) {
         res.json(vetOffices.data);
+        console.log("================================================");
+        console.log("================================================");
+        console.log("================================================");
         console.log(vetOffices.data);
       })
       .catch(function(err) {

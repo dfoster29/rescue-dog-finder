@@ -9,18 +9,24 @@ router
   .route("/dogparks")
   .get(function (req, res) {
 
-    // convert zip code to lat and long
-    
     axios
-      .get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?type=park&keyword=dog&radius=15000&keyword=pet_store&key=${process.env.googlePlacesAPI}`, 
+      .get(`https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=${process.env.googlePlacesAPI}`, 
       {
-        location:  `${req.query.lat}, ${req.query.long}`
+        params: {
+          location: `${req.query.lat}, ${req.query.long}`,
+          radius: 5000,
+          type: "park",
+          keyword: "dog"
+        }
       })
       .then(function (dogParks) {
         res.json(dogParks.data);
+        console.log("================================================");
+        console.log("================================================");
+        console.log("================================================");
         console.log(dogParks.data);
       })
-      .catch(function(err) {
+      .catch(function (err) {
         console.log(err);
         res.json(err);
       });

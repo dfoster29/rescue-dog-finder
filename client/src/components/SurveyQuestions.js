@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+// import Parks from "./Dogpark";
+// import Vets from "./Vets";
+// import Stores from "./PetStores";
+import Questions from "./Questions";
 
 class SurveyQuestions extends Component {
   state = {
-    zip: ""
+    zip: "",
+    zip_submitted: false
   };
 
   handleOnChange = event => {
@@ -16,15 +21,21 @@ class SurveyQuestions extends Component {
 
   getLatLong = event => {
     event.preventDefault();
-    API.getZip({ zip: this.state.zipcode })
+    API.getZip({
+      zip: this.state.zipcode
+    })
       .then(res => {
         console.log(res.data);
-        this.getDogParks(res.data.lat, res.data.long);
+        this.getDogParks(res.data.lat, res.data.lng);
+        this.setState({
+          zip_submitted: true
+        });
       })
       .catch(err => console.log(err));
   };
 
   getDogParks = (lat, long) => {
+    console.log(lat, long);
     API.getDogPark({
       lat: lat,
       long: long
@@ -33,16 +44,16 @@ class SurveyQuestions extends Component {
     });
   };
 
-  getPetStores = (lat, long, dogParks) => {
+  getPetStores = (lat, long, dogParkData) => {
     API.getPetStore({
       lat: lat,
       long: long
     }).then(res => {
-      this.getVetOffices(lat, long);
+      this.getVetOffices(lat, long, dogParkData, res.data);
     });
   };
 
-  getVetOffices = (lat, long, dogParks, petStores) => {
+  getVetOffices = (lat, long, dogParkData, petStoreData) => {
     API.getVetOffice({
       lat: lat,
       long: long
@@ -50,35 +61,49 @@ class SurveyQuestions extends Component {
       this.setState({
         lat: lat,
         long: long,
-        dogParks: dogParks,
-        petStores: petStores,
-        vetOffices: res.data
+        dog_parks: dogParkData,
+        pet_stores: petStoreData,
+        vet_offices: res.data
       });
     });
   };
 
   render() {
     return (
-      <div>
-        <form>
-          <div className="form-group">
-            <input
-              name="zipcode"
-              value={this.state.zipcode}
-              placeholder="enter your zip code"
-              type="text"
-              onChange={this.handleOnChange}
-              className="form-control mb-2"
-            />
-            <button
-              type="submit"
-              className="btn btn-block btn-success"
-              onClick={this.getLatLong}
-            >
-              Submit
-            </button>
+      <div className="container mt-4">
+        <div className="card">
+          <div className="card-header text-center">
+            <h3>Dog Match Survey</h3>
           </div>
-        </form>
+
+          <div className="card-body text-center">
+            {this.state.zip_submitted ? (
+              <Questions />
+            ) : (
+              <div>
+                <form>
+                  <div className="form-group">
+                    <input
+                      name="zipcode"
+                      value={this.state.zipcode}
+                      placeholder="enter your zip code"
+                      type="text"
+                      onChange={this.handleOnChange}
+                      className="form-control mb-2"
+                    />
+                    <button
+                      type="submit"
+                      className="btn btn-lg btn-success"
+                      onClick={this.getLatLong}
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     );
   }

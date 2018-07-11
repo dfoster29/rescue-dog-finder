@@ -1,0 +1,240 @@
+[
+  {
+    "name": "Akita",
+    "photo": "",
+    "size": "XL",
+    "shedding": true
+  },
+  {
+    "name": "Alaskan Malamute",
+    "photo": "",
+    "size": "XL",
+    "shedding": true
+  },
+  {
+    "name": "Australian Cattle Dog",
+    "photo": "",
+    "size": "M",
+    "shedding": true,
+    "energy": "high"
+  },
+  {
+    "name": "Australian Shepherd",
+    "photo": "",
+    "size": "M",
+    "shedding": true
+  },
+  {
+    "name": "Basset Hound",
+    "photo": "",
+    "size": "M",
+    "shedding": "",
+    "energy": "low"
+  },
+  {
+    "name": "Beagle",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Bernese Mountain Dog",
+    "photo": "",
+    "size": "XL"
+  },
+  {
+    "name": "Border Collie",
+    "photo": "",
+    "size": "M"
+  },
+  {
+    "name": "Boston Terrier",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Boxer",
+    "photo": "",
+    "size": "L"
+  },
+  {
+    "name": "Brittany",
+    "photo": "",
+    "size": "M"
+  },
+  {
+    "name": "Brussels Griffon",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Bulldog",
+    "photo": "",
+    "size": "M"
+  },
+  {
+    "name": "Corgi",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Cavalier King Charles Spaniel",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Chihuahua",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Collie",
+    "photo": "",
+    "size": "M"
+  },
+  {
+    "name": "Dachshund",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Dalmatian",
+    "photo": "",
+    "size": "M"
+  },
+  {
+    "name": "English Setter",
+    "photo": "",
+    "size": "M"
+  },
+  {
+    "name": "French Bulldog",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "German Shepherd",
+    "photo": "",
+    "size": "L"
+  },
+  {
+    "name": "German Shorthaired Pointer",
+    "photo": "",
+    "size": "M"
+  },
+  {
+    "name": "Golden Retriever",
+    "photo": "",
+    "size": "L"
+  },
+  {
+    "name": "Great Dane",
+    "photo": "",
+    "size": "XL"
+  },
+  {
+    "name": "Great Pyrenees",
+    "photo": "",
+    "size": "XL"
+  },
+  {
+    "name": "Greyhound",
+    "photo": "",
+    "size": "L"
+  },
+  {
+    "name": "Italian Greyhound",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Jack Russel Terrier",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Labrador Retriever",
+    "photo": "",
+    "size": "L"
+  },
+  {
+    "name": "Maltese",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Mastiff",
+    "photo": "",
+    "size": "XL"
+  },
+  {
+    "name": "Newfoundland",
+    "photo": "",
+    "size": "XL"
+  },
+  {
+    "name": "Norwich Terrier",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Papillon",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Pekingese",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Pit Bull Terrier",
+    "photo": "",
+    "size": "M"
+  },
+  {
+    "name": "Pomeranian",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Poodle",
+    "photo": "",
+    "size": "M",
+    "shedding": false
+  },
+  {
+    "name": "Pug",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Rottweiler",
+    "photo": "",
+    "size": "L"
+  },
+  {
+    "name": "Saint Bernard",
+    "photo": "",
+    "size": "XL"
+  },
+  {
+    "name": "Shiba Inu",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Siberian Husky",
+    "photo": "",
+    "size": "M"
+  },
+  {
+    "name": "Fox Terrier",
+    "photo": "",
+    "size": "S"
+  },
+  {
+    "name": "Yorkshire Terrier",
+    "photo": "",
+    "size": "S"
+  }
+]
