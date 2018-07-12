@@ -70,39 +70,42 @@ class SurveyQuestions extends Component {
 
   render() {
     return (
-      <div className="container mt-4">
-        <div className="card">
-          <div className="card-header text-center">
-            <h3>Dog Match Survey</h3>
-          </div>
-
-          <div className="card-body text-center">
-            {this.state.zip_submitted ? (
-              <Questions />
-            ) : (
-              <div>
-                <form>
-                  <div className="form-group">
-                    <input
-                      name="zipcode"
-                      value={this.state.zipcode}
-                      placeholder="enter your zip code"
-                      type="text"
-                      onChange={this.handleOnChange}
-                      className="form-control mb-2"
-                    />
-                    <button
-                      type="submit"
-                      className="btn btn-lg btn-success"
-                      onClick={this.getLatLong}
-                    >
-                      Submit
-                    </button>
+      <div>
+        <div className="card-body">
+          {this.state.zip_submitted ? (
+                <Questions />
+          ) : (
+            <div>
+              <div className="container mt-4 text-center">
+                <div className="card">
+                  <div className="card-header text-center">
+                    <h3>Dog Match Survey</h3>
                   </div>
-                </form>
+                  <div className="row justify-content-center">
+                    <form className="m-4 w-25">
+                      <div className="form-group">
+                        <input
+                          name="zipcode"
+                          value={this.state.zipcode}
+                          placeholder="enter your zip code"
+                          type="text"
+                          onChange={this.handleOnChange}
+                          className="form-control mb-4"
+                        />
+                        <button
+                          type="submit"
+                          className="btn btn-lg btn-success"
+                          onClick={this.getLatLong}
+                        >
+                          Submit
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     );
