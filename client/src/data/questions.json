@@ -1,52 +1,47 @@
 [
   {
-    "question": "What is your previous dog experience?",
-    "id": 1,
+    "question": "1: What is your previous dog experience?",
+    "id": 0,
     "answers": ["have never had a dog", "have had a dog before", "have a dog now"]
   },
   {
-    "question": "Which best describes your current living situation?",
-    "id": 2,
+    "question": "2: Which best describes your current living situation?",
+    "id": 1,
     "answers": ["apartment", "house with small yard", "house with large yard"]
   },
   {
-    "question": "Do any young children live in your home?",
-    "id": 3,
+    "question": "3: Do any young children live in your home?",
+    "id": 2,
     "answers": ["yes", "no"]
   },
   {
-    "question": "What amount of shedding will you tolerate?",
-    "id": 4,
+    "question": "4: What amount of shedding will you tolerate?",
+    "id": 3,
     "answers": ["none", "moderate shedding", "heavy or seasonal shedding"]
   },
   {
-    "question": "What amount of barking will you tolerate?",
-    "id": 5,
+    "question": "5: What amount of barking will you tolerate?",
+    "id": 4,
     "answers": ["infrequent", "frequent"]
   },
   {
-    "question": "How active are you?",
-    "id": 6,
+    "question": "6: How active are you?",
+    "id": 5,
     "answers": ["couch potato", "excercise here and there", "daily excerise"]
   },
   {
-    "question": "Are you willing to house train your new dog?",
+    "question": "7: Are you willing to house train your new dog?",
+    "id": 6,
+    "answers": ["yes", "no"]
+  },
+  {
+    "question": "8: Do you want a dog that will fit in a carry-on?",
     "id": 7,
     "answers": ["yes", "no"]
   },
   {
-    "question": "Do you want a dog that will fit in a carry-on?",
+    "question": "9: question 9 here",
     "id": 8,
-    "answers": ["yes", "no"]
-  },
-  {
-    "question": "question 9 here",
-    "id": 9,
-    "answers": ["answer 1", "answer 2", "answer 3"]
-  },
-  {
-    "question": "question 10 here",
-    "id": 10,
     "answers": ["answer 1", "answer 2", "answer 3"]
   }
 ]

@@ -1,25 +1,71 @@
 import React, { Component } from "react";
 import QuestionData from "../data/questions.json";
 import Dogs from "./Dogs";
+import DogData from "../data/dogs.json";
 
 class Questions extends Component {
-  state = {
-    counter: 0,
-    survey_complete: false
-  };
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      counter: 0,
+      survey_complete: false,
+      QuestionData: QuestionData,
+      DogData: DogData,
+      filteredList: DogData,
+      survey_answers: []
+    };
+  }
   componentDidMount() {
-    console.log(QuestionData);
+    // console.log(QuestionData);
   }
 
   nextQuestion = event => {
     event.preventDefault();
-    if (this.state.counter < 9) {
+    let filteredList;
+
+    switch(this.state.counter) {
+      case 0:
+        filteredList = this.questionOne();
+        break;
+      default:
+        filteredList = [...this.state.filteredList];
+        break;
+    }
+    console.log(filteredList);
+    if (this.state.counter < 7) {
       this.setState({
-        counter: this.state.counter + 1
+        counter: this.state.counter + 1,
+        filteredList: filteredList
       });
     }
   };
+
+
+
+  answerSelected = (questionID, item) => {
+    console.log("answer selected");
+    var answers = [...this.state.survey_answers];
+    answers[questionID] = item;
+    console.log(answers);
+    this.setState({
+      survey_answers: answers
+    });
+  };
+
+  questionOne = () => {
+    var dogs = [...this.state.filteredList];
+      switch(this.state.survey_answers[0]) {
+        case "have a dog now":
+          return dogs.filter(dog => {
+            // write conditional to filter out dogs
+            return (dog.goodWithDogs === "yes")
+          })
+         default:
+          return dogs;
+      }
+    }
+  
 
   submitSurvey = event => {
     event.preventDefault();
@@ -43,47 +89,21 @@ class Questions extends Component {
                 <h3 className="my-3">
                   {QuestionData[this.state.counter].question}
                 </h3>
-                <div className="form-check form-check-inline">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios1"
-                    value="option1"
-                  />
-                  <label className="form-check-label" for="exampleRadios1">
-                    {QuestionData[this.state.counter].answers[0]}
-                  </label>
-                </div>
-
-                <div className="form-check form-check-inline">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                  />
-                  <label className="form-check-label" for="exampleRadios2">
-                    {QuestionData[this.state.counter].answers[1]}
-                  </label>
-                </div>
-
-                <div className="form-check form-check-inline">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                  />
-                  <label className="form-check-label" for="exampleRadios2">
-                    {QuestionData[this.state.counter].answers[2]}
-                  </label>
-                </div>
-
+                {this.state.QuestionData[this.state.counter].answers.map(
+                  (item, id = this.state.counter) => {
+                    return (
+                      <button
+                        className="btn btn-lg btn-light"
+                        key = {id}
+                        onClick={() => this.answerSelected(this.state.counter, item)}
+                      >
+                        {item}
+                      </button>
+                    );
+                  }
+                )}
                 <div className="my-3">
-                  {this.state.counter < 9 ? (
+                  {this.state.counter < 7 ? (
                     <button
                       className="btn btn-lg btn-primary"
                       onClick={this.nextQuestion}

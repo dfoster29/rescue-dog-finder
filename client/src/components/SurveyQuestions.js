@@ -4,11 +4,14 @@ import API from "../utils/API";
 // import Vets from "./Vets";
 // import Stores from "./PetStores";
 import Questions from "./Questions";
+import dogData from "../data/dogs.json";
 
 class SurveyQuestions extends Component {
   state = {
     zip: "",
-    zip_submitted: false
+    zip_submitted: false,
+    dog_data: dogData,
+    zipcode: ""
   };
 
   handleOnChange = event => {
@@ -73,8 +76,9 @@ class SurveyQuestions extends Component {
       <div>
         <div className="card-body">
           {this.state.zip_submitted ? (
-                <Questions />
+            <Questions />
           ) : (
+            // <Questions questionprops={this.questionFunctionName}/>
             <div>
               <div className="container mt-4 text-center">
                 <div className="card">

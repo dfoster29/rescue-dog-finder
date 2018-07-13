@@ -1,240 +1,600 @@
 [
   {
     "name": "Akita",
-    "photo": "",
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001904/Akita-On-White-01.jpg",
     "size": "XL",
-    "shedding": true
+    "goodWithChildren": "no",
+    "goodWithDogs": "no",
+    "trainability": "medium",
+    "grooming": "weekly",
+    "shedding": "seasonal",
+    "activityLevel": "medium",
+    "barking": "medium",
+    "group": "working"
   },
   {
     "name": "Alaskan Malamute",
-    "photo": "",
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001815/Alaskan-Malamute-On-White-03.jpg",
     "size": "XL",
-    "shedding": true
+    "goodWithChildren": "no",
+    "goodWithDogs": "no",
+    "trainability": "medium",
+    "grooming": "weekly",
+    "shedding": "seasonal",
+    "activityLevel": "medium",
+    "barking": "medium",
+    "group": "working"
   },
   {
     "name": "Australian Cattle Dog",
-    "photo": "",
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001408/Australian-Cattle-Dog-On-White-01.jpg",
     "size": "M",
-    "shedding": true,
-    "energy": "high"
+    "goodWithChildren": "",
+    "goodWithDogs": "yes",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Australian Shepherd",
-    "photo": "",
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001303/Australian-Shepherd-On-White-08.jpg",
     "size": "M",
-    "shedding": true
+    "goodWithChildren": "",
+    "goodWithDogs": "yes",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Basset Hound",
-    "photo": "",
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001049/Basset-Hound-On-White-01.jpg",
     "size": "M",
+    "goodWithChildren": "",
+    "goodWithDogs": "yes",
+    "trainability": "",
+    "grooming": "",
     "shedding": "",
-    "energy": "low"
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Beagle",
-    "photo": "",
-    "size": "S"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01.jpg",
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Bernese Mountain Dog",
-    "photo": "",
-    "size": "XL"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13000440/Bernese-Mountain-Dog-On-White-01.jpg",
+    "size": "XL",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Border Collie",
-    "photo": "",
-    "size": "M"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12235957/Border-Collie-On-White-01.jpg",
+    "size": "M",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Boston Terrier",
-    "photo": "",
-    "size": "S"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12235809/Boston-Terrier-On-White-01.jpg",
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Boxer",
-    "photo": "",
-    "size": "L"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12235639/Boxer-On-White-03.jpg",
+    "size": "L",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Brittany",
-    "photo": "",
-    "size": "M"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/19033403/Brittany-1.jpg",
+    "size": "M",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Brussels Griffon",
-    "photo": "",
-    "size": "S"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12235422/Brussels-Griffon-On-White-01.jpg",
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Bulldog",
-    "photo": "",
-    "size": "M"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/06014400/bulldog-on-skateboard-grinning.jpg",
+    "size": "M",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Corgi",
-    "photo": "",
-    "size": "S"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12225919/Pembroke-Welsh-Corgi-On-White-01.jpg",
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Cavalier King Charles Spaniel",
-    "photo": "",
-    "size": "S"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12234928/Cavalier-King-Charles-Spaniel-On-White-01.jpg",
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Chihuahua",
-    "photo": "",
-    "size": "S"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12234710/Chihuahua-On-White-03.jpg",
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Collie",
-    "photo": "",
-    "size": "M"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12234244/Collie-On-White-01.jpg",
+    "size": "M",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Dachshund",
-    "photo": "",
-    "size": "S"
+    "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12234114/Dachshund-On-White-01.jpg",
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Dalmatian",
     "photo": "",
-    "size": "M"
+    "size": "M",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "English Setter",
     "photo": "",
-    "size": "M"
+    "size": "M",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "French Bulldog",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "German Shepherd",
     "photo": "",
-    "size": "L"
+    "size": "L",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "German Shorthaired Pointer",
     "photo": "",
-    "size": "M"
+    "size": "M",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Golden Retriever",
     "photo": "",
-    "size": "L"
+    "size": "L",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Great Dane",
     "photo": "",
-    "size": "XL"
+    "size": "XL",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Great Pyrenees",
     "photo": "",
-    "size": "XL"
+    "size": "XL",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Greyhound",
     "photo": "",
-    "size": "L"
+    "size": "L",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Italian Greyhound",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Jack Russel Terrier",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Labrador Retriever",
     "photo": "",
-    "size": "L"
+    "size": "L",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Maltese",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Mastiff",
     "photo": "",
-    "size": "XL"
+    "size": "XL",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Newfoundland",
     "photo": "",
-    "size": "XL"
+    "size": "XL",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Norwich Terrier",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Papillon",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Pekingese",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Pit Bull Terrier",
     "photo": "",
-    "size": "M"
+    "size": "M",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Pomeranian",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Poodle",
     "photo": "",
     "size": "M",
-    "shedding": false
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Pug",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Rottweiler",
     "photo": "",
-    "size": "L"
+    "size": "L",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Saint Bernard",
     "photo": "",
-    "size": "XL"
+    "size": "XL",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Shiba Inu",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Siberian Husky",
     "photo": "",
-    "size": "M"
+    "size": "M",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Fox Terrier",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   },
   {
     "name": "Yorkshire Terrier",
     "photo": "",
-    "size": "S"
+    "size": "S",
+    "goodWithChildren": "",
+    "goodWithDogs": "",
+    "trainability": "",
+    "grooming": "",
+    "shedding": "",
+    "activityLevel": "",
+    "barking": "",
+    "group": ""
   }
 ]

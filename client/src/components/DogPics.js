@@ -1,52 +1,75 @@
-import React, { Component } from "react";
-const Carousel = require('react-bootstrap/lib/Carousel');
+import React, { Component } from 'react';
+import { Carousel, CarouselControl, CarouselInner, CarouselItem, CarouselIndicators, CarouselIndicator, View, Mask, Container } from 'mdbreact';
 
-class ControlledCarousel extends Component {
-  constructor(props, context) {
-    super(props, context);
-
-    this.handleSelect = this.handleSelect.bind(this);
-
+class CarouselPage extends Component {
+  constructor(props) {
+    super(props);
+    this.next = this.next.bind(this);
+    this.prev = this.prev.bind(this);
     this.state = {
-      index: 0,
-      direction: null
+      activeItem: 1,
+      maxLength: 2
     };
   }
 
-  handleSelect(selectedIndex, e) {
-    alert(`selected=${selectedIndex}, direction=${e.direction}`);
-    this.setState({
-      index: selectedIndex,
-      direction: e.direction
-    });
+  next() {
+    let nextItem = this.state.activeItem + 1;
+    if(nextItem > this.state.maxLength) {
+      this.setState({ activeItem: 1 });
+    } else {
+      this.setState({ activeItem: nextItem });
+    }
   }
 
-  render() {
-    const { index, direction } = this.state;
+  prev() {
+    let prevItem = this.state.activeItem - 1;
+    if(prevItem < 1) {
+      this.setState({ activeItem: this.state.maxLength });
+    } else {
+      this.setState({ activeItem: prevItem });
+    }
+  }
 
-    return (
-      <Carousel
-        activeIndex={index}
-        direction={direction}
-        onSelect={this.handleSelect}
-      >
-        <Carousel.Item>
-          <img  alt="900x500" src="http://photos.petfinder.com/photos/pets/42085534/1/?bust=1530712516&width=500&-x.jpg" />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img alt="900x500" src="http://photos.petfinder.com/photos/pets/42085534/2/?bust=1530712523&width=500&-x.jpg" />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+  goToIndex(item) {
+    if (this.state.activeItem !== item) {
+      this.setState({
+        activeItem: item
+      });
+    }
+  }
+
+  render(){
+    const { activeItem } = this.state;
+    return(
+      <Container>
+        <Carousel
+          activeItem={this.state.activeItem}
+          next={this.next}
+          className="z-depth-1">
+          <CarouselInner>
+            <CarouselItem itemId="1">
+              <View>
+                <img className="d-block w-100" src="http://photos.petfinder.com/photos/pets/42085534/1/?bust=1530712516&width=500&-x.jpg" alt="First slide" />
+                <Mask overlay="black-light"></Mask>
+              </View>
+            </CarouselItem>
+            <CarouselItem itemId="2">
+              <View>
+                <img className="d-block w-100" src="http://photos.petfinder.com/photos/pets/42085534/2/?bust=1530712523&width=500&-x.jpg" alt="Second slide" />
+                <Mask overlay="black-strong"></Mask>
+              </View>
+            </CarouselItem>
+          </CarouselInner>
+          <CarouselControl direction="prev" role="button" onClick={() => { this.prev(); }} />
+          <CarouselControl direction="next" role="button" onClick={() => { this.next(); }} />
+          <CarouselIndicators>
+            <CarouselIndicator active={activeItem === 1 ? true : false} onClick={() => { this.goToIndex(1); }}></CarouselIndicator>
+            <CarouselIndicator active={activeItem === 2 ? true : false} onClick={() => { this.goToIndex(2); }}></CarouselIndicator>
+          </CarouselIndicators>
+        </Carousel>
+      </Container>
     );
   }
 }
 
-export default ControlledCarousel;
+export default CarouselPage;
