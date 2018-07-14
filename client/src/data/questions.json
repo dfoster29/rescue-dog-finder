@@ -2,7 +2,7 @@
   {
     "question": "1: What is your previous dog experience?",
     "id": 0,
-    "answers": ["have never had a dog", "have had a dog before", "have a dog now"]
+    "answers": ["have never owned a dog", "owned a dog in the past", "currently have have a dog(s)"]
   },
   {
     "question": "2: Which best describes your current living situation?",
@@ -10,24 +10,24 @@
     "answers": ["apartment", "house with small yard", "house with large yard"]
   },
   {
-    "question": "3: Do any young children live in your home?",
+    "question": "3: Do any children live in your home? If yes, approximately how old are they?",
     "id": 2,
-    "answers": ["yes", "no"]
+    "answers": ["no", "0-10 years old", "10+ years old"]
   },
   {
     "question": "4: What amount of shedding will you tolerate?",
     "id": 3,
-    "answers": ["none", "moderate shedding", "heavy or seasonal shedding"]
+    "answers": ["minimal to none", "moderate shedding", "heavy or seasonal shedding"]
   },
   {
     "question": "5: What amount of barking will you tolerate?",
     "id": 4,
-    "answers": ["infrequent", "frequent"]
+    "answers": ["minimal", "here and there", "frequent"]
   },
   {
     "question": "6: How active are you?",
     "id": 5,
-    "answers": ["couch potato", "excercise here and there", "daily excerise"]
+    "answers": ["couch potato", "excercise here and there", "daily excercise"]
   },
   {
     "question": "7: Are you willing to house train your new dog?",
@@ -40,8 +40,18 @@
     "answers": ["yes", "no"]
   },
   {
-    "question": "9: question 9 here",
+    "question": "9: How much time can you commit to training your new dog?",
     "id": 8,
-    "answers": ["answer 1", "answer 2", "answer 3"]
+    "answers": ["1-4 hours per week", "4-9 hours per week", "10 or more hours per week"]
+  },
+  {
+    "question": "10: Are you willing to pay to have your dog groomed?",
+    "id": 9,
+    "answers": ["yes", "no"]
+  },
+  {
+    "question": "Thank you for completing the survey!",
+    "id": 10,
+    "answers": [""]
   }
 ]

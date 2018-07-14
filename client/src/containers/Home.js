@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
 class Home extends Component {
-
   render() {
     return (
       <div>
@@ -15,11 +14,13 @@ class Home extends Component {
               with a breed of dog best suited for your current lifestyle and
               living situation. You will then be shown dogs of this breed that
               are currently available for adoption on Petfinder. In addition to
-              available dogs, you can easily search for nearby pet stores, dog parks,
-              and veterinary offices.
+              available dogs, you can easily search for nearby pet stores, dog
+              parks, and veterinary offices.
             </p>
             <NavLink className="nav-link" to="/survey">
-              <button className="btn btn-lg btn-primary">start survey</button>
+              <div className="row justify-content-center">
+                <button className="btn btn-lg btn-primary">start survey</button>
+              </div>
             </NavLink>
           </div>
         </div>
