@@ -116,7 +116,7 @@ class Questions extends Component {
       case "10+ years old":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
-          return (dog.goodWithKids === "older" || dog.goodWithKids === "yes");
+          return (dog.goodWithKids === "older" || dog.goodWithKids === "yes" || dog.goodWithKids === "supervised");
         });
       default:
         return dogs;
@@ -170,7 +170,12 @@ class Questions extends Component {
         case "excercise here and there":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
-          return (dog.activityLevel === "low" || dog.activtyLevel === "medium")
+          return dog.activtyLevel === "medium";
+        });
+        case "daily excercise":
+        return dogs.filter(dog => {
+          // write conditional to filter out dogs
+          return (dog.activtyLevel === "high" || dog.activtyLevel === "very high");
         });
       default:
         return dogs;
@@ -200,11 +205,6 @@ class Questions extends Component {
         return dogs.filter(dog => {
           // write conditional to filter out dogs
           return dog.size === "S";
-        });
-        case "no":
-        return dogs.filter(dog => {
-          // write conditional to filter out dogs
-          return (dog.size === "M" || dog.size === "L" || dog.size === "XL");
         });
       default:
         return dogs;
@@ -276,14 +276,14 @@ class Questions extends Component {
                 <h3>Dog Match Survey</h3>
               </div>
               <div>
-                <h3 className="my-3">
+                <h3 className="mt-5 mb-3">
                   {QuestionData[this.state.counter].question}
                 </h3>
                 {this.state.QuestionData[this.state.counter].answers.map(
                   (item, id = this.state.counter) => {
                     return (
                       <button
-                        className="btn btn-lg btn-light"
+                        className="btn btn-lg btn-secondary m-4"
                         key={id}
                         onClick={() =>
                           this.answerSelected(this.state.counter, item)
@@ -297,7 +297,7 @@ class Questions extends Component {
                 <div className="my-3">
                   {this.state.counter < 10 ? (
                     <button
-                      className="btn btn-lg btn-primary"
+                      className="btn btn-lg btn-primary mb-4"
                       onClick={this.nextQuestion}
                     >
                       next question
