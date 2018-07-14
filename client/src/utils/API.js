@@ -16,5 +16,9 @@ export default {
 
   getVetOffice: function(latlongObj) {
     return axios.get("/api/google/vetoffices", {params: latlongObj})
+  },
+
+  getDogs: function(petfinderBreed, location, petfinderSize) {
+    return axios.get("/api/petfinder/dogs", {params: petfinderBreed, location, petfinderSize})
   }
 }

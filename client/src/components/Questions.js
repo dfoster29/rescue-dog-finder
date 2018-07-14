@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import QuestionData from "../data/questions.json";
-import Dogs from "./Dogs";
 import DogData from "../data/dogs.json";
+import API from "../utils/API";
+import BreedMatch from "./BreedMatch";
 
 class Questions extends Component {
   constructor(props) {
@@ -13,12 +14,34 @@ class Questions extends Component {
       QuestionData: QuestionData,
       DogData: DogData,
       filteredList: DogData,
-      survey_answers: []
+      survey_answers: [],
+      petfinderBreed: "",
+      breedMatch: {
+        name: "husky",
+        photo:
+          "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001815/Alaskan-Malamute-On-White-03.jpg"
+      }
     };
   }
   componentDidMount() {
     // console.log(QuestionData);
   }
+
+  searchPetfinder = () => {
+    // event.preventDefault();
+    API.getDogs({
+      zip: this.props.zip,
+      petfinderBreed: this.state.petfinderBreed,
+      petfinderSize: this.state.petfinderSize
+    })
+      .then(res => {
+        console.log(res.data);
+        this.setState({
+          petfinderResults: res.data
+        });
+      })
+      .catch(err => console.log(err));
+  };
 
   nextQuestion = event => {
     event.preventDefault();
@@ -50,13 +73,13 @@ class Questions extends Component {
         filteredList = this.questionSeven();
         break;
       case 8:
-        filteredList = this.questionEight();
+        filteredList = this.questionSeven();
         break;
       default:
         filteredList = [...this.state.filteredList];
         break;
     }
-    console.log(filteredList);
+    // console.log(filteredList);
     if (this.state.counter < 10) {
       this.setState({
         counter: this.state.counter + 1,
@@ -65,10 +88,10 @@ class Questions extends Component {
     }
   };
   answerSelected = (questionID, item) => {
-    console.log("answer selected");
+    // console.log("answer selected");
     var answers = [...this.state.survey_answers];
     answers[questionID] = item;
-    console.log(answers);
+    // console.log(answers);
     this.setState({
       survey_answers: answers
     });
@@ -80,7 +103,9 @@ class Questions extends Component {
       case "currently have have a dog(s)":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
-          return dog.goodWithDogs === "yes";
+          return (
+            dog.goodWithDogs === "yes" || dog.goodWithDogs === "supervised"
+          );
         });
       default:
         return dogs;
@@ -116,7 +141,11 @@ class Questions extends Component {
       case "10+ years old":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
-          return (dog.goodWithKids === "older" || dog.goodWithKids === "yes" || dog.goodWithKids === "supervised");
+          return (
+            dog.goodWithKids === "older" ||
+            dog.goodWithKids === "yes" ||
+            dog.goodWithKids === "supervised"
+          );
         });
       default:
         return dogs;
@@ -129,12 +158,16 @@ class Questions extends Component {
       case "minimal to none":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
-          return (dog.shedding === "low" || dog.shedding === "none");
+          return dog.shedding === "low" || dog.shedding === "none";
         });
-        case "moderate shedding":
+      case "moderate shedding":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
-          return (dog.shedding === "low" || dog.shedding === "none" || dog.shedding === "medium");
+          return (
+            dog.shedding === "low" ||
+            dog.shedding === "none" ||
+            dog.shedding === "medium"
+          );
         });
       default:
         return dogs;
@@ -149,10 +182,10 @@ class Questions extends Component {
           // write conditional to filter out dogs
           return dog.barking === "low";
         });
-        case "here and there":
+      case "here and there":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
-          return (dog.barking === "low" || dog.barking === "medium");
+          return dog.barking === "low" || dog.barking === "medium";
         });
       default:
         return dogs;
@@ -167,40 +200,41 @@ class Questions extends Component {
           // write conditional to filter out dogs
           return dog.activityLevel === "low";
         });
-        case "excercise here and there":
+      case "excercise here and there":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
-          return dog.activtyLevel === "medium";
+          return dog.activtyLevel === "medium" || dog.activtyLevel === "low";
         });
-        case "daily excercise":
+      case "daily excercise":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
-          return (dog.activtyLevel === "high" || dog.activtyLevel === "very high");
+          return (
+            dog.activtyLevel === "high" || dog.activtyLevel === "very high"
+          );
         });
       default:
         return dogs;
     }
   };
+
+  // questionSix = () => {
+  //   // this question will be used to set the acceptable age range for the petfinder search.  if the user isn't willing to house train then the search will return only older dogs. if they are then the search will return all ages
+
+  //   var dogs = [...this.state.filteredList];
+  //   switch (this.state.survey_answers[6]) {
+  //     case "no":
+  //       return dogs.filter(dog => {
+  //         // write conditional to filter out dogs
+  //         return dog.propertyName === "";
+  //       });
+  //     default:
+  //       return dogs;
+  //   }
+  // };
 
   questionSix = () => {
-
-    // this question will be used to set the acceptable age range for the petfinder search.  if the user isn't willing to house train then the search will return only older dogs. if they are then the search will return all ages
-
     var dogs = [...this.state.filteredList];
     switch (this.state.survey_answers[6]) {
-      case "":
-        return dogs.filter(dog => {
-          // write conditional to filter out dogs
-          return dog.propertyName === "";
-        });
-      default:
-        return dogs;
-    }
-  };
-
-  questionSeven = () => {
-    var dogs = [...this.state.filteredList];
-    switch (this.state.survey_answers[7]) {
       case "yes":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
@@ -211,30 +245,29 @@ class Questions extends Component {
     }
   };
 
-  questionEight = () => {
+  questionSeven = () => {
     var dogs = [...this.state.filteredList];
-    switch (this.state.survey_answers[8]) {
+    switch (this.state.survey_answers[7]) {
       case "1-4 hours per week":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
           return dog.trainability === "easy";
         });
-        case "4-9 hours per week":
+      case "4-9 hours per week":
         return dogs.filter(dog => {
           // write conditional to filter out dogs
-          return (dog.trainability === "easy" || dog.trainability === "medium");
+          return dog.trainability === "easy" || dog.trainability === "medium";
         });
       default:
         return dogs;
     }
   };
 
-  questionNine = () => {
+  questionEight = () => {
     var dogs = [...this.state.filteredList];
-    switch (this.state.survey_answers[9]) {
+    switch (this.state.survey_answers[8]) {
       case "no":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return dog.grooming === "free";
         });
       default:
@@ -256,25 +289,33 @@ class Questions extends Component {
 
   submitSurvey = event => {
     event.preventDefault();
-    let filteredList;
+    // let filteredList;
 
     this.setState({
       survey_complete: true,
-      filteredList: filteredList
+      dogInfo: this.state.filteredList[0],
+      petfinderBreed: this.state.filteredList[0].name,
+      petfinderSize: this.state.filteredList[0].size
     });
+    this.searchPetfinder();
   };
 
   render() {
+    console.log(this.props);
     return (
       <div>
         {this.state.survey_complete ? (
-          <Dogs />
+          <BreedMatch
+            searchPetfinder={this.searchPetfinder}
+            dogInfo={this.state.breedMatch}
+          />
         ) : (
           <div className="container mt-4 text-center">
             <div className="card">
               <div className="card-header text-center">
                 <h3>Dog Match Survey</h3>
               </div>
+
               <div>
                 <h3 className="mt-5 mb-3">
                   {QuestionData[this.state.counter].question}
@@ -295,7 +336,7 @@ class Questions extends Component {
                   }
                 )}
                 <div className="my-3">
-                  {this.state.counter < 10 ? (
+                  {this.state.counter < 8 ? (
                     <button
                       className="btn btn-lg btn-primary mb-4"
                       onClick={this.nextQuestion}
@@ -305,9 +346,9 @@ class Questions extends Component {
                   ) : (
                     <button
                       className="btn btn-lg btn-success mb-4"
-                      onClick={this.submitSurvey}
+                      onClick={(event) => {this.nextQuestion(event); this.submitSurvey(event);}}
                     >
-                      show Petfinder results
+                      show breed match
                     </button>
                   )}
                 </div>

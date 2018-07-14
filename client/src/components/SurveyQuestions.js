@@ -76,7 +76,7 @@ class SurveyQuestions extends Component {
       <div>
         <div className="card-body">
           {this.state.zip_submitted ? (
-            <Questions />
+            <Questions zip={this.state.zipcode}/>
           ) : (
             // <Questions questionprops={this.questionFunctionName}/>
             <div>

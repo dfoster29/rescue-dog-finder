@@ -10,17 +10,16 @@ router
     axios
       .get(`http://api.petfinder.com/pet.find?format=json&animal=dog&key=${process.env.petfinderAPI}`, 
       {
-        // location: // zip code 
-        // breed: // breed name here,
-        // age: // dog age here
         params: {
-          // location:  `${req.query.lat}, ${req.query.long}`,
-          // type: "veterinary_care",
-          // radius: 5000
+          location: req.query.zip,
+          breed: req.query.petfinderBreed,
+          size: req.query.petfinderSize
         }
       })
       .then(function (dogSearch) {
-        res.json(dogSearch.data)
+        res.json(dogSearch.data);
+        console.log("this is the returned data",dogSearch.data);
+        console.log("this is req.query", req.query);
       })
       .catch(function(err) {
         console.log(err);

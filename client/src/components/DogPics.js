@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Carousel, CarouselControl, CarouselInner, CarouselItem, CarouselIndicators, CarouselIndicator, View, Mask, Container } from 'mdbreact';
 
-class CarouselPage extends Component {
+class DogPics extends Component {
   constructor(props) {
     super(props);
     this.next = this.next.bind(this);
@@ -72,4 +72,4 @@ class CarouselPage extends Component {
   }
 }
 
-export default CarouselPage;
+export default DogPics;

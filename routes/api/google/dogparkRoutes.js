@@ -21,10 +21,10 @@ router
       })
       .then(function (dogParks) {
         res.json(dogParks.data);
-        console.log("================================================");
-        console.log("================================================");
-        console.log("================================================");
-        console.log(dogParks.data);
+        // console.log("================================================");
+        // console.log("================================================");
+        // console.log("================================================");
+        // console.log(dogParks.data);
       })
       .catch(function (err) {
         console.log(err);

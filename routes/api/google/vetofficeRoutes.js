@@ -20,10 +20,10 @@ router
       })
       .then(function (vetOffices) {
         res.json(vetOffices.data);
-        console.log("================================================");
-        console.log("================================================");
-        console.log("================================================");
-        console.log(vetOffices.data);
+        // console.log("================================================");
+        // console.log("================================================");
+        // console.log("================================================");
+        // console.log(vetOffices.data);
       })
       .catch(function(err) {
         console.log(err);

@@ -21,10 +21,10 @@ router
       })
       .then(function (petStores) {
         res.json(petStores.data);
-        console.log("================================================");
-        console.log("================================================");
-        console.log("================================================");
-        console.log(petStores.data)
+        // console.log("================================================");
+        // console.log("================================================");
+        // console.log("================================================");
+        // console.log(petStores.data)
       })
       .catch(function(err) {
         console.log(err);
