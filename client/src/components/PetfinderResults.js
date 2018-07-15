@@ -1,8 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import DogPics from "./DogPics";
 
-class Dogs extends Component {
-  render() {
+const Dogs = props => {
+  console.log(props);
+
+  if (!props.results.petfinder.pets.pet) {
+    console.log("no props here");
     return (
       <div className="container mt-4">
         <div className="card">
@@ -11,33 +14,53 @@ class Dogs extends Component {
           </div>
 
           <div className="card-body">
-            <div className="row">
-              <div className="col-md-6">
-                <DogPics />
-              </div>
-
-              <div className="col-md-6">
-                <h2 className="text-center mb-4">Posh the Pomsky</h2>
-                <h4>age: baby</h4>
-                <h4>sex: male</h4>
-                <h4>breeds: Husky and Pomeranian</h4>
-                <h4 className="mt-4">
-                  "Posh is an adorable puppy. He is what they call a \"Pomsky.\"
-                  (Half Pomeranian, half Husky.) He is a delightful little
-                  fellow, bouncy and energetic. A little bit timid initially but
-                  warms up with patience. He was born in early February so is 5
-                  months old now. He weighs 10 pounds, will likely be a small
-                  adult, so would do best in a household without very young
-                  children."
-                </h4>
-              </div>
-            </div>
+            <h2 className="text-center mb-4">
+              Sorry. No dogs have been found on Petfinder that match this breed.
+            </h2>
           </div>
         </div>
       </div>
     );
   }
-}
+
+  // const photos = props.results.petfinder.pets.pet.media.photos.photo.filter(
+  //   photo => photo["@size"] === "x"
+  // );
+
+  return (
+    <div>
+      <div>
+        {props.results.petfinder.pets.pet.map(pet => (
+          <div className="container mt-4">
+            <div className="card">
+              <div className="card-header text-center">
+                <h3>{pet.name.$t}</h3>
+              </div>
+
+              <div className="card-body">
+                <div className="row">
+                  <div className="col-md-6">
+                    <DogPics
+                      dogPhoto={props.results.petfinder.pets.pet.media.photos.photo.filter(
+                        photo => photo["@size"] === "x"
+                      )}
+                    />
+                  </div>
+
+                  <div className="col-md-6">
+                    <h4>age: {pet.age.$t}</h4>
+                    <h4>sex: {pet.sex.$t}</h4>
+                    <p className="mt-4">{pet.description.$t}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Dogs;
 

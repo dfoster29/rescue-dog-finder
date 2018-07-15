@@ -3,6 +3,7 @@ import QuestionData from "../data/questions.json";
 import DogData from "../data/dogs.json";
 import API from "../utils/API";
 import BreedMatch from "./BreedMatch";
+import PetfinderResults from "./PetfinderResults";
 
 class Questions extends Component {
   constructor(props) {
@@ -16,11 +17,9 @@ class Questions extends Component {
       filteredList: DogData,
       survey_answers: [],
       petfinderBreed: "",
-      breedMatch: {
-        name: "husky",
-        photo:
-          "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001815/Alaskan-Malamute-On-White-03.jpg"
-      }
+      breedMatch: {},
+      dogResultsFound: false,
+      breedMatched: false
     };
   }
   componentDidMount() {
@@ -35,10 +34,12 @@ class Questions extends Component {
       petfinderSize: this.state.petfinderSize
     })
       .then(res => {
-        console.log(res.data);
         this.setState({
-          petfinderResults: res.data
+          petfinderResults: res.data,
+          dogResultsFound: true,
+          breedMatched: false
         });
+        console.log(res.data);
       })
       .catch(err => console.log(err));
   };
@@ -217,21 +218,6 @@ class Questions extends Component {
     }
   };
 
-  // questionSix = () => {
-  //   // this question will be used to set the acceptable age range for the petfinder search.  if the user isn't willing to house train then the search will return only older dogs. if they are then the search will return all ages
-
-  //   var dogs = [...this.state.filteredList];
-  //   switch (this.state.survey_answers[6]) {
-  //     case "no":
-  //       return dogs.filter(dog => {
-  //         // write conditional to filter out dogs
-  //         return dog.propertyName === "";
-  //       });
-  //     default:
-  //       return dogs;
-  //   }
-  // };
-
   questionSix = () => {
     var dogs = [...this.state.filteredList];
     switch (this.state.survey_answers[6]) {
@@ -275,18 +261,6 @@ class Questions extends Component {
     }
   };
 
-  // "name": "Alaskan Malamute",
-  // "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001815/Alaskan-Malamute-On-White-03.jpg",
-  // "size": "XL",
-  // "goodWithChildren": "no",
-  // "goodWithDogs": "no",
-  // "trainability": "medium",
-  // "grooming": "weekly",
-  // "shedding": "seasonal",
-  // "activityLevel": "medium",
-  // "barking": "medium",
-  // "group": "working"
-
   submitSurvey = event => {
     event.preventDefault();
     // let filteredList;
@@ -295,21 +269,30 @@ class Questions extends Component {
       survey_complete: true,
       dogInfo: this.state.filteredList[0],
       petfinderBreed: this.state.filteredList[0].name,
-      petfinderSize: this.state.filteredList[0].size
+      petfinderSize: this.state.filteredList[0].size,
+      breedMatched: true
     });
-    this.searchPetfinder();
   };
 
   render() {
-    console.log(this.props);
+    console.log(this.state);
     return (
       <div>
-        {this.state.survey_complete ? (
+        {this.state.dogResultsFound ? (
+          <PetfinderResults results={this.state.petfinderResults} />
+        ) : (
+          ""
+        )}
+
+        {this.state.survey_complete && this.state.breedMatched ? (
           <BreedMatch
             searchPetfinder={this.searchPetfinder}
-            dogInfo={this.state.breedMatch}
+            dogInfo={this.state.dogInfo}
           />
         ) : (
+          ""
+        )}
+        {!this.state.survey_complete && !this.state.dogResultsFound ? (
           <div className="container mt-4 text-center">
             <div className="card">
               <div className="card-header text-center">
@@ -346,7 +329,10 @@ class Questions extends Component {
                   ) : (
                     <button
                       className="btn btn-lg btn-success mb-4"
-                      onClick={(event) => {this.nextQuestion(event); this.submitSurvey(event);}}
+                      onClick={event => {
+                        this.nextQuestion(event);
+                        this.submitSurvey(event);
+                      }}
                     >
                       show breed match
                     </button>
@@ -355,6 +341,8 @@ class Questions extends Component {
               </div>
             </div>
           </div>
+        ) : (
+          ""
         )}
       </div>
     );

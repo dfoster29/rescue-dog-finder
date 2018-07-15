@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Carousel, CarouselControl, CarouselInner, CarouselItem, CarouselIndicators, CarouselIndicator, View, Mask, Container } from 'mdbreact';
+import { Carousel, CarouselControl, CarouselInner, CarouselItem, View, Mask, Container } from 'mdbreact';
 
 class DogPics extends Component {
   constructor(props) {
@@ -46,26 +46,21 @@ class DogPics extends Component {
           activeItem={this.state.activeItem}
           next={this.next}
           className="z-depth-1">
+
           <CarouselInner>
-            <CarouselItem itemId="1">
-              <View>
-                <img className="d-block w-100" src="http://photos.petfinder.com/photos/pets/42085534/1/?bust=1530712516&width=500&-x.jpg" alt="First slide" />
-                <Mask overlay="black-light"></Mask>
-              </View>
-            </CarouselItem>
-            <CarouselItem itemId="2">
-              <View>
-                <img className="d-block w-100" src="http://photos.petfinder.com/photos/pets/42085534/2/?bust=1530712523&width=500&-x.jpg" alt="Second slide" />
-                <Mask overlay="black-strong"></Mask>
-              </View>
-            </CarouselItem>
+            {this.props.dogPhoto.map((photo, index) => (
+            <CarouselItem itemId={index}>
+            <View>
+              <img className="d-block w-100" src={photo.$t} alt="First slide" />
+              <Mask overlay="black-light"></Mask>
+            </View>
+          </CarouselItem>
+            ))}
           </CarouselInner>
+
           <CarouselControl direction="prev" role="button" onClick={() => { this.prev(); }} />
           <CarouselControl direction="next" role="button" onClick={() => { this.next(); }} />
-          <CarouselIndicators>
-            <CarouselIndicator active={activeItem === 1 ? true : false} onClick={() => { this.goToIndex(1); }}></CarouselIndicator>
-            <CarouselIndicator active={activeItem === 2 ? true : false} onClick={() => { this.goToIndex(2); }}></CarouselIndicator>
-          </CarouselIndicators>
+
         </Carousel>
       </Container>
     );
