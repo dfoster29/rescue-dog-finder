@@ -30,8 +30,8 @@ class Questions extends Component {
     // event.preventDefault();
     API.getDogs({
       zip: this.props.zip,
-      petfinderBreed: this.state.petfinderBreed,
-      petfinderSize: this.state.petfinderSize
+      petfinderBreed: this.state.dogInfo.name,
+      petfinderSize: this.state.dogInfo.size
     })
       .then(res => {
         this.setState({
@@ -267,9 +267,7 @@ class Questions extends Component {
 
     this.setState({
       survey_complete: true,
-      dogInfo: this.state.filteredList[0],
-      petfinderBreed: this.state.filteredList[0].name,
-      petfinderSize: this.state.filteredList[0].size,
+      dogInfo: this.state.filteredList[[Math.floor(Math.random() * this.state.filteredList.length)]],
       breedMatched: true
     });
   };

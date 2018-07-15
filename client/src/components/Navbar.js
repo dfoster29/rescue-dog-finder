@@ -18,6 +18,11 @@ const Navbar = () => (
         </li> */}
       </ul>
     </div>
+    <div className="justify-content-right text-white">powered by 
+        <a href="https://www.petfinder.com">
+        <img alt="petfinder" src="https://wagspetadoption.org/wp-content/uploads/2016/10/pet_finder_logo_tm.svg"></img>
+        </a>
+    </div>
   </nav>
 )
 

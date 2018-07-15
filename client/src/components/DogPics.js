@@ -16,7 +16,7 @@ class DogPics extends Component {
     this.prev = this.prev.bind(this);
     this.state = {
       activeItem: 1,
-      maxLength: this.props.dogPhoto.length
+      maxLength: (this.props.dogPhoto.length - 1)
     };
   }
 
@@ -47,7 +47,7 @@ class DogPics extends Component {
   // }
 
   render() {
-    const { activeItem } = this.state;
+    // const { activeItem } = this.state;
     return (
       <Container>
         <Carousel
