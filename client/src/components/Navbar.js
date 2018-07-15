@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => (
   <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-    <NavLink className="navbar-brand" to="/"><h3>Rescue Dog Finder</h3></NavLink>
+    <NavLink className="navbar-brand" to="/"><h2>Plenty of Pups</h2></NavLink>
     
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">

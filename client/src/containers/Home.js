@@ -6,10 +6,10 @@ class Home extends Component {
     return (
       <div>
         <div className="jumbotron">
-          <h1 className="text-center mb-4">Welcome to the Rescue Dog Finder</h1>
+          <h1 className="text-center mb-4">Welcome to Plenty of Pups</h1>
           <div className="container">
             <p>
-              Here at the Rescue Dog Matcher we hope to match you with your
+              Here at Plenty of Pups we hope to match you with your
               furever friend. Upon completetion of a survey you will be matched
               with a breed of dog best suited for your current lifestyle and
               living situation. You will then be shown dogs of this breed that

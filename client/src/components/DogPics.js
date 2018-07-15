@@ -1,5 +1,13 @@
-import React, { Component } from 'react';
-import { Carousel, CarouselControl, CarouselInner, CarouselItem, View, Mask, Container } from 'mdbreact';
+import React, { Component } from "react";
+import {
+  Carousel,
+  CarouselControl,
+  CarouselInner,
+  CarouselItem,
+  View,
+  Mask,
+  Container
+} from "mdbreact";
 
 class DogPics extends Component {
   constructor(props) {
@@ -8,13 +16,13 @@ class DogPics extends Component {
     this.prev = this.prev.bind(this);
     this.state = {
       activeItem: 1,
-      maxLength: 2
+      maxLength: this.props.dogPhoto.length
     };
   }
 
   next() {
     let nextItem = this.state.activeItem + 1;
-    if(nextItem > this.state.maxLength) {
+    if (nextItem > this.state.maxLength) {
       this.setState({ activeItem: 1 });
     } else {
       this.setState({ activeItem: nextItem });
@@ -23,44 +31,59 @@ class DogPics extends Component {
 
   prev() {
     let prevItem = this.state.activeItem - 1;
-    if(prevItem < 1) {
+    if (prevItem < 1) {
       this.setState({ activeItem: this.state.maxLength });
     } else {
       this.setState({ activeItem: prevItem });
     }
   }
 
-  goToIndex(item) {
-    if (this.state.activeItem !== item) {
-      this.setState({
-        activeItem: item
-      });
-    }
-  }
+  // goToIndex(item) {
+  //   if (this.state.activeItem !== item) {
+  //     this.setState({
+  //       activeItem: item
+  //     });
+  //   }
+  // }
 
-  render(){
+  render() {
     const { activeItem } = this.state;
-    return(
+    return (
       <Container>
         <Carousel
           activeItem={this.state.activeItem}
           next={this.next}
-          className="z-depth-1">
-
+          className="z-depth-1"
+        >
           <CarouselInner>
             {this.props.dogPhoto.map((photo, index) => (
-            <CarouselItem itemId={index}>
-            <View>
-              <img className="d-block w-100" src={photo.$t} alt="First slide" />
-              <Mask overlay="black-light"></Mask>
-            </View>
-          </CarouselItem>
+              <CarouselItem data-interval="false" itemId={index}>
+                <View>
+                  <img
+                    className="d-block w-100"
+                    src={photo.$t}
+                    alt="First slide"
+                  />
+                  <Mask overlay="black-light" />
+                </View>
+              </CarouselItem>
             ))}
           </CarouselInner>
 
-          <CarouselControl direction="prev" role="button" onClick={() => { this.prev(); }} />
-          <CarouselControl direction="next" role="button" onClick={() => { this.next(); }} />
-
+          <CarouselControl
+            direction="prev"
+            role="button"
+            onClick={() => {
+              this.prev();
+            }}
+          />
+          <CarouselControl
+            direction="next"
+            role="button"
+            onClick={() => {
+              this.next();
+            }}
+          />
         </Carousel>
       </Container>
     );

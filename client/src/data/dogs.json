@@ -2,6 +2,7 @@
   {
     "name": "Akita",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001904/Akita-On-White-01.jpg",
+    "description": "Akitas are burly, heavy-boned spitz-type dogs of imposing stature. Standing 24 to 28 inches at the shoulder, Akitas have a dense coat that comes in several colors, including white. The head is broad and massive, and is balanced in the rear by a full, curled-over tail. The erect ears and dark, shining eyes contribute to an expression of alertness, a hallmark of the breed. Akitas are quiet, fastidious dogs. Wary of strangers and often intolerant of other animals, Akitas will gladly share their silly, affectionate side with family and friends. They thrive on human companionship. The large, independent-thinking Akita is hardwired for protecting those they love. They must be well socialized from birth with people and other dogs.",
     "size": "XL",
     "goodWithKids": "superivsed",
     "goodWithDogs": "no",
@@ -15,6 +16,7 @@
   {
     "name": "Alaskan Malamute",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001815/Alaskan-Malamute-On-White-03.jpg",
+    "description": "The Alaskan Malamute stands 23 to 25 inches at the shoulder and weighs 75 to 85 pounds. Everything about Mals suggests their origin as an arctic sledge dog: The heavy bone, deep chest, powerful shoulders, and dense, weatherproof coat all scream, “I work hard for a living!” But their almond-shaped brown eyes have an affectionate sparkle, suggesting Mals enjoy snuggling with their humans when the workday is done. Mals are pack animals. And in your family “pack,” the leader must be you. If a Mal doesn’t respect you, he will wind up owning you instead of the other way around. Firm but loving training should begin in early puppyhood. That said, a well-behaved Mal is a joy to be with—playful, gentle, friendly, and great with kids.",
     "size": "XL",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -28,6 +30,7 @@
   {
     "name": "Australian Cattle Dog / Blue Heeler",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001408/Australian-Cattle-Dog-On-White-01.jpg",
+    "description": "Standing between 17 to 20 inches at the shoulder, the Australian Cattle Dog is a sturdy, hard-muscled herder of strength and agility. The ACD is born with a white coat that turns blue-gray or red. Both coat varieties feature distinctive mottling or specking patterns. ACDs have immense work drive and excel at hunting, chasing, and, of course, moving livestock. Their boundless energy and supple gait make them excellent running partners. ACDs are true-blue loyal, famously smart, ever alert, and wary of strangers. If an ACD isn’t challenged, he easily becomes bored and gets into mischief. It is recommended that ACD owners participate with their dog in some work, sport, or regular exercise to keep him mentally and physically fit.",
     "size": "M",
     "goodWithKids": "older",
     "goodWithDogs": "supervised",

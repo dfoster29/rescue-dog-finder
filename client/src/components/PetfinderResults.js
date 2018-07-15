@@ -39,7 +39,7 @@ const Dogs = props => {
 
               <div className="card-body">
                 <div className="row">
-                  <div className="col-md-6">
+                <div className="col-md-6">
                     <DogPics
                       dogPhoto={pet.media.photos.photo.filter(
                         photo => photo["@size"] === "x"
@@ -48,9 +48,11 @@ const Dogs = props => {
                   </div>
 
                   <div className="col-md-6">
-                    <h4>age: {pet.age.$t}</h4>
-                    <h4>sex: {pet.sex.$t}</h4>
-                    <p className="mt-4">{pet.description.$t}</p>
+                    <h5>age: {pet.age.$t}</h5>
+                    <h5>sex: {pet.sex.$t}</h5>
+                    {/* <h5>breed(s): {pet.breeds.breed[0].$t} {pet.breeds.breed[1].$t} {pet.breeds.breed[3].$t}</h5> */}
+                    <p style={{height:"250px", overflow: "scroll"}} className="mt-4 text-justify w-100">{pet.description.$t}</p>
+                    <p className="text-right">scroll for more info...</p>
                   </div>
                 </div>
               </div>
