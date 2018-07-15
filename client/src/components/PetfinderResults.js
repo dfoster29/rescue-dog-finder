@@ -41,7 +41,7 @@ const Dogs = props => {
                 <div className="row">
                   <div className="col-md-6">
                     <DogPics
-                      dogPhoto={props.results.petfinder.pets.pet.media.photos.photo.filter(
+                      dogPhoto={pet.media.photos.photo.filter(
                         photo => photo["@size"] === "x"
                       )}
                     />
