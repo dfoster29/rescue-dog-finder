@@ -14,9 +14,20 @@ class DogPics extends Component {
     super(props);
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
+
+    // if (this.props.dogPhoto.length > 1 ) {
+    //   maxlength = this.props.dogPhoto.length - 1
+    // } else {
+    //   maxlength = 1
+    // };
+
+    // this.setState({
+    //   maxlength: ""
+    // });
+
     this.state = {
       activeItem: 1,
-      maxLength: (this.props.dogPhoto.length - 1)
+      maxLength: this.props.dogPhoto.length -1
     };
   }
 
@@ -50,41 +61,46 @@ class DogPics extends Component {
     // const { activeItem } = this.state;
     return (
       <Container>
-        <Carousel
-          activeItem={this.state.activeItem}
-          next={this.next}
-          className="z-depth-1"
-        >
-          <CarouselInner>
-            {this.props.dogPhoto.map((photo, index) => (
-              <CarouselItem data-interval="false" itemId={index}>
-                <View>
-                  <img
-                    className="d-block w-100"
-                    src={photo.$t}
-                    alt="First slide"
-                  />
-                  <Mask overlay="black-light" />
-                </View>
-              </CarouselItem>
-            ))}
-          </CarouselInner>
+        {this.props.dogPhoto.$t ? (
+          <img className="img-fluid" src={this.props.dogPhoto.$t} />
+        ) : (
+          <Carousel
+            activeItem={this.state.activeItem}
+            next={this.next}
+            className="z-depth-1"
+            interval={false}
+          >
+            <CarouselInner>
+              {this.props.dogPhoto.map((photo, index) => (
+                <CarouselItem data-interval="false" itemId={index}>
+                  <View>
+                    <img
+                      className="d-block w-100"
+                      src={photo.$t}
+                      alt="First slide"
+                    />
+                    <Mask overlay="black-light" />
+                  </View>
+                </CarouselItem>
+              ))}
+            </CarouselInner>
 
-          <CarouselControl
-            direction="prev"
-            role="button"
-            onClick={() => {
-              this.prev();
-            }}
-          />
-          <CarouselControl
-            direction="next"
-            role="button"
-            onClick={() => {
-              this.next();
-            }}
-          />
-        </Carousel>
+            <CarouselControl
+              direction="prev"
+              role="button"
+              onClick={() => {
+                this.prev();
+              }}
+            />
+            <CarouselControl
+              direction="next"
+              role="button"
+              onClick={() => {
+                this.next();
+              }}
+            />
+          </Carousel>
+        )}
       </Container>
     );
   }

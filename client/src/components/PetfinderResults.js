@@ -21,62 +21,79 @@ const Dogs = props => {
         </div>
       </div>
     );
+  } else {
+    return (
+      <div>
+        <div>
+          {props.results.petfinder.pets.pet.map(pet => (
+            <div className="container mt-4">
+              <div className="card">
+                <div className="card-header text-center">
+                  <h3>{pet.name.$t}</h3>
+                </div>
+
+                <div className="card-body">
+                  <div className="row">
+                    <div className="col-md-6">
+                      {pet.media.photos.photo.length === 5 ? (
+                        <img className="img-fluid w-100" src={pet.media.photos.photo[3].$t} />
+                      ) : (
+                        <DogPics
+                          dogPhoto={pet.media.photos.photo.filter(
+                            photo => photo["@size"] === "x"
+                          )}
+                        />
+                      )}
+                    </div>
+
+                    <div className="col-md-6">
+                      {pet.breeds.breed[0] && pet.breeds.breed[1] ? (
+                        <div>
+                          Breeds: {pet.breeds.breed[0].$t} and{" "}
+                          {pet.breeds.breed[1].$t}
+                        </div>
+                      ) : (
+                        <div>Breed: {pet.breeds.breed.$t}</div>
+                      )}
+
+                      <div>Age: {pet.age.$t}</div>
+                      <div>Sex: {pet.sex.$t}</div>
+                      <div>
+                        Location: {pet.contact.city.$t}, {pet.contact.state.$t}
+                      </div>
+                      <div>
+                        Email:{" "}
+                        <a href={"mailto:" + pet.contact.email.$t}>
+                          {pet.contact.email.$t}
+                        </a>
+                      </div>
+                      {pet.contact.phone.$t ? (
+                        <div>Phone: {pet.contact.phone.$t}</div>
+                      ) : (
+                        <div />
+                      )}
+                      {/* <h5>breed(s): {pet.breeds.breed[0].$t} {pet.breeds.breed[1].$t} {pet.breeds.breed[3].$t}</h5> */}
+                      <div
+                        style={{ maxHeight: "250px", overflow: "scroll" }}
+                        className="mt-4 text-justify w-100"
+                      >
+                        {pet.description.$t}
+                      </div>
+                      {/* <p className="text-right">scroll for more info...</p> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
   }
 
   // const photos = props.results.petfinder.pets.pet.media.photos.photo.filter(
   //   photo => photo["@size"] === "x"
   // );
-
-  return (
-    <div>
-      <div>
-        {props.results.petfinder.pets.pet.map(pet => (
-          <div className="container mt-4">
-            <div className="card">
-              <div className="card-header text-center">
-                <h3>{pet.name.$t}</h3>
-              </div>
-
-              <div className="card-body">
-                <div className="row">
-                  <div className="col-md-6">
-                    <DogPics
-                      dogPhoto={pet.media.photos.photo.filter(
-                        photo => photo["@size"] === "x"
-                      )}
-                    />
-                  </div>
-
-                  <div className="col-md-6">
-                    <div>Age: {pet.age.$t}</div>
-                    <div>Sex: {pet.sex.$t}</div>
-                    <div>
-                      Location: {pet.contact.city.$t}, {pet.contact.state.$t}
-                    </div>
-                    <div>Email: {pet.contact.email.$t}</div>
-                    {pet.contact.phone.$t ? (
-                      <div>Phone: {pet.contact.phone.$t}</div>
-                    ) : (
-                      <div />
-                    )}
-
-                    {/* <h5>breed(s): {pet.breeds.breed[0].$t} {pet.breeds.breed[1].$t} {pet.breeds.breed[3].$t}</h5> */}
-                    <div
-                      style={{ maxHeight: "250px", overflow: "scroll" }}
-                      className="mt-4 text-justify w-100"
-                    >
-                      {pet.description.$t}
-                    </div>
-                    {/* <p className="text-right">scroll for more info...</p> */}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
 };
 
 export default Dogs;
