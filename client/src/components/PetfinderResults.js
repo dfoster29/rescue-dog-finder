@@ -15,7 +15,8 @@ const Dogs = props => {
 
           <div className="card-body">
             <h2 className="text-center mb-4">
-              Sorry. No dogs have been found on Petfinder that match this breed.
+              Sorry. There are currently no dogs on Petfinder that match this
+              breed.
             </h2>
           </div>
         </div>
@@ -26,25 +27,47 @@ const Dogs = props => {
       <div>
         <div>
           {props.results.petfinder.pets.pet.map(pet => (
-            <div className="container mt-4">
+            <div key={pet.id.$t} className="container mt-4">
               <div className="card">
                 <div className="card-header text-center">
-                  <h3>{pet.name.$t}</h3>
+                  {pet.name ? (
+                    <h3>{pet.name.$t}</h3>
+                  ) : (
+                    <h3>(no name listed)</h3>
+                  )}
                 </div>
 
-                <div className="card-body">
+                <div
+                  className="card-body"
+                  style={{ maxHeight: "800px"}}
+                >
                   <div className="row">
-                    <div className="col-md-6">
-                      {pet.media.photos.photo.length === 5 ? (
-                        <img className="img-fluid w-100" src={pet.media.photos.photo[3].$t} />
-                      ) : (
-                        <DogPics
-                          dogPhoto={pet.media.photos.photo.filter(
-                            photo => photo["@size"] === "x"
-                          )}
+                    {pet.media.photos ? (
+                      <div className="col-md-6 text-center">
+                        {pet.media.photos.photo.length === 5 ? (
+                          <img
+                            className="img-fluid"
+                            alt="dog"
+                            src={pet.media.photos.photo[3].$t}
+                            style={{ height: "auto", width: "100%" }}
+                          />
+                        ) : (
+                          <DogPics
+                            dogPhoto={pet.media.photos.photo.filter(
+                              photo => photo["@size"] === "x"
+                            )}
+                          />
+                        )}
+                      </div>
+                    ) : (
+                      <div className="col-md-6">
+                        <img
+                          className="img-fluid w-100"
+                          alt="dog"
+                          src="https://www.victoriabox.ca/img/no-product-img.png"
                         />
-                      )}
-                    </div>
+                      </div>
+                    )}
 
                     <div className="col-md-6">
                       {pet.breeds.breed[0] && pet.breeds.breed[1] ? (

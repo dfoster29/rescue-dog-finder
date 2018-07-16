@@ -61,9 +61,9 @@ class DogPics extends Component {
     // const { activeItem } = this.state;
     return (
       <Container>
-        {this.props.dogPhoto.$t ? (
-          <img className="img-fluid" src={this.props.dogPhoto.$t} />
-        ) : (
+        {/* {this.props.dogPhoto.$t ? (
+          <img className="img-fluid" alt="dog" src={this.props.dogPhoto.$t} />
+        ) : ( */}
           <Carousel
             activeItem={this.state.activeItem}
             next={this.next}
@@ -72,7 +72,7 @@ class DogPics extends Component {
           >
             <CarouselInner>
               {this.props.dogPhoto.map((photo, index) => (
-                <CarouselItem data-interval="false" itemId={index}>
+                <CarouselItem key={index} data-interval="false" itemId={index}>
                   <View>
                     <img
                       className="d-block w-100"
@@ -100,7 +100,7 @@ class DogPics extends Component {
               }}
             />
           </Carousel>
-        )}
+        {/* )} */}
       </Container>
     );
   }

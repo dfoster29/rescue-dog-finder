@@ -19,7 +19,8 @@ class Questions extends Component {
       petfinderBreed: "",
       breedMatch: {},
       dogResultsFound: false,
-      breedMatched: false
+      breedMatched: false,
+      petfinderResults: {}
     };
   }
   componentDidMount() {
@@ -103,10 +104,13 @@ class Questions extends Component {
     switch (this.state.survey_answers[0]) {
       case "currently have have a dog(s)":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return (
             dog.goodWithDogs === "yes" || dog.goodWithDogs === "supervised"
           );
+        });
+      case "have never owned a dog":
+        return dogs.filter(dog => {
+          return dog.trainability === "easy" || dog.trainability === "medium";
         });
       default:
         return dogs;
@@ -118,12 +122,10 @@ class Questions extends Component {
     switch (this.state.survey_answers[1]) {
       case "apartment":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return dog.size === "S" || dog.size === "M";
         });
       case "house with small yard":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return dog.size === "S" || dog.size === "M" || dog.size === "L";
         });
       default:
@@ -136,12 +138,12 @@ class Questions extends Component {
     switch (this.state.survey_answers[2]) {
       case "0-10 years old":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
-          return dog.goodWithKids === "yes";
+          return (
+            dog.goodWithKids === "yes" || dog.goodWithKids === "supervised"
+          );
         });
       case "10+ years old":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return (
             dog.goodWithKids === "older" ||
             dog.goodWithKids === "yes" ||
@@ -158,12 +160,10 @@ class Questions extends Component {
     switch (this.state.survey_answers[3]) {
       case "minimal to none":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return dog.shedding === "low" || dog.shedding === "none";
         });
       case "moderate shedding":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return (
             dog.shedding === "low" ||
             dog.shedding === "none" ||
@@ -180,12 +180,10 @@ class Questions extends Component {
     switch (this.state.survey_answers[4]) {
       case "minimal":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return dog.barking === "low";
         });
       case "here and there":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return dog.barking === "low" || dog.barking === "medium";
         });
       default:
@@ -198,19 +196,16 @@ class Questions extends Component {
     switch (this.state.survey_answers[5]) {
       case "couch potato":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return dog.activityLevel === "low";
         });
       case "excercise here and there":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
-          return dog.activtyLevel === "medium" || dog.activtyLevel === "low";
+          return dog.activityLevel === "medium" || dog.activityLevel === "low";
         });
       case "daily excercise":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return (
-            dog.activtyLevel === "high" || dog.activtyLevel === "very high"
+            dog.activityLevel === "high" || dog.activityLevel === "very high"
           );
         });
       default:
@@ -223,7 +218,6 @@ class Questions extends Component {
     switch (this.state.survey_answers[6]) {
       case "yes":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return dog.size === "S";
         });
       default:
@@ -236,12 +230,10 @@ class Questions extends Component {
     switch (this.state.survey_answers[7]) {
       case "1-4 hours per week":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return dog.trainability === "easy";
         });
       case "4-9 hours per week":
         return dogs.filter(dog => {
-          // write conditional to filter out dogs
           return dog.trainability === "easy" || dog.trainability === "medium";
         });
       default:
@@ -267,7 +259,9 @@ class Questions extends Component {
 
     this.setState({
       survey_complete: true,
-      dogInfo: this.state.filteredList[[Math.floor(Math.random() * this.state.filteredList.length)]],
+      dogInfo: this.state.filteredList[
+        [Math.floor(Math.random() * this.state.filteredList.length)]
+      ],
       breedMatched: true
     });
   };
