@@ -3,7 +3,8 @@ import React from "react";
 const BreedMatch = props => {
   return (
     <div className="container mt-4">
-      <div className="card">
+      <div className="card"
+      style={{boxShadow : "10px, 10px, 10px, gray"}}>
         <div className="card-header text-center">
           <h3>You've matched with:</h3>
         </div>
