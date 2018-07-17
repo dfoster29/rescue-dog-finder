@@ -1,38 +1,38 @@
 [
   {
-    "question": "1: What is your previous dog experience?",
+    "question": "1: Which size dog would you prefer?",
     "id": 0,
+    "answers": ["small: 3-30 lbs", "medium: 20-60 lbs", "large: 50-100 lbs", "extra-large: 100+ lbs"]
+  },
+  {
+    "question": "2: What is your previous dog experience?",
+    "id": 1,
     "answers": ["have never owned a dog", "owned a dog in the past", "currently have have a dog(s)"]
   },
   {
-    "question": "2: Which best describes your current living situation?",
-    "id": 1,
+    "question": "3: Which best describes your current living situation?",
+    "id": 2,
     "answers": ["apartment", "house with small yard", "house with large yard"]
   },
   {
-    "question": "3: Do any children live in your home? If yes, approximately how old are they?",
-    "id": 2,
+    "question": "4: Do any children live in your home? If yes, approximately how old are they?",
+    "id": 3,
     "answers": ["no", "0-10 years old", "10+ years old"]
   },
   {
-    "question": "4: What amount of shedding will you tolerate?",
-    "id": 3,
+    "question": "5: What amount of shedding will you tolerate?",
+    "id": 4,
     "answers": ["minimal to none", "moderate shedding", "heavy or seasonal shedding"]
   },
   {
-    "question": "5: What amount of barking will you tolerate?",
-    "id": 4,
+    "question": "6: What amount of barking will you tolerate?",
+    "id": 5,
     "answers": ["minimal", "here and there", "frequent"]
   },
   {
-    "question": "6: How active are you?",
-    "id": 5,
-    "answers": ["couch potato", "excercise here and there", "daily excercise"]
-  },
-  {
-    "question": "7: Does your new dog have to fit in a carry-on?",
+    "question": "7: How active are you?",
     "id": 6,
-    "answers": ["yes", "no"]
+    "answers": ["couch potato", "excercise here and there", "daily excercise"]
   },
   {
     "question": "8: How much time can you commit to training your new dog?",

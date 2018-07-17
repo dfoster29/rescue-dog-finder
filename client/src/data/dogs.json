@@ -3,7 +3,7 @@
     "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d2/American-akita.jpg",
     "description": "",
     "size": "XL",
-    "goodWithKids": "superivsed",
+    "goodWithKids": "supervised",
     "goodWithDogs": "no",
     "trainability": "medium",
     "grooming": "free",
@@ -14,7 +14,7 @@
   },
   {
     "name": "Alaskan Malamute",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Alaskan_Malamute.jpg",
     "description": "",
     "size": "XL",
     "goodWithKids": "supervised",
@@ -28,7 +28,7 @@
   },
   {
     "name": "Australian Cattle Dog / Blue Heeler",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cc/ACD-blue-spud.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "older",
@@ -42,7 +42,7 @@
   },
   {
     "name": "Australian Shepherd",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/4/41/Bvdb-australischeherder.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "yes",
@@ -56,7 +56,7 @@
   },
   {
     "name": "Basset Hound",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/8/87/Bvdb-bassethound1.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "yes",
@@ -70,7 +70,7 @@
   },
   {
     "name": "Beagle",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/9/95/Bronco_the_Beagle.JPG",
     "description": "",
     "size": "S",
     "goodWithKids": "yes",
@@ -83,8 +83,22 @@
     "group": "hound"
   },
   {
-    "name": "Bernese Mountain Dog",
+    "name": "Belgian Shepherd / Malinois",
     "photo": "",
+    "description": "",
+    "size": "L",
+    "goodWithKids": "supervised",
+    "goodWithDogs": "yes",
+    "trainability": "easy",
+    "grooming": "free",
+    "shedding": "medium",
+    "activityLevel": "high",
+    "barking": "medium",
+    "group": "working"
+  },
+  {
+    "name": "Bernese Mountain Dog",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Wystawa_Rybnik_02.10.2011_berne%C5%84ski_pies_pasterski_1pl.jpg",
     "description": "",
     "size": "XL",
     "goodWithKids": "supervised",
@@ -98,7 +112,7 @@
   },
   {
     "name": "Border Collie",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Border_Collie_Macho_Blanco_y_Negro_%28Batman%2C_los_Baganes_Border_Collie%29.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "older",
@@ -112,7 +126,7 @@
   },
   {
     "name": "Boston Terrier",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Boston_Terrier_Eden_Forever.JPG",
     "description": "",
     "size": "S",
     "goodWithKids": "yes",
@@ -126,7 +140,7 @@
   },
   {
     "name": "Boxer",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Brindle_cd.jpg",
     "description": "",
     "size": "L",
     "goodWithKids": "yes",
@@ -140,7 +154,7 @@
   },
   {
     "name": "Brittany Spaniel",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/f/fe/American_Brittany_standing.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "supervised",
@@ -154,7 +168,7 @@
   },
   {
     "name": "Brussels Griffon",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Brussels_Griffon_Rembrant_%28jpg_format%29.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "supervised",
@@ -167,8 +181,8 @@
     "group": "toy"
   },
   {
-    "name": "Bulldog",
-    "photo": "",
+    "name": "English Bulldog",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Whitebulldog.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "supervised",
@@ -182,7 +196,7 @@
   },
   {
     "name": "Corgi",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Grupp_1%2C_WELSH_CORGI_PEMBROKE%2C_BE_CH_C.I.B._LU_CN_NL_CH_Siggen%E2%80%99s_Marguerita_%2823683385973%29.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "supervised",
@@ -196,7 +210,7 @@
   },
   {
     "name": "Cavalier King Charles Spaniel",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/5/5f/CarterBIS.Tiki.13.6.09.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "yes",
@@ -210,7 +224,7 @@
   },
   {
     "name": "Chihuahua",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/8/80/Chihuahue%C3%B1o_paseante.JPG",
     "description": "",
     "size": "S",
     "goodWithKids": "supervised",
@@ -224,7 +238,7 @@
   },
   {
     "name": "Collie",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/4/48/Rough_Collie_600.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "supervised",
@@ -238,7 +252,7 @@
   },
   {
     "name": "Dachshund",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/f/f4/MiniDachshund1_wb.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "supervised",
@@ -252,7 +266,7 @@
   },
   {
     "name": "Dalmatian",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Prunella_Fitzgerald_de_Puech_Barrayre.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "supervised",
@@ -266,7 +280,7 @@
   },
   {
     "name": "English Setter",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/1/15/EnglishSetter9_fx_wb.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "supervised",
@@ -280,7 +294,7 @@
   },
   {
     "name": "French Bulldog",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/5/54/Mi_Gran_Amigo_El_General.jpg",
     "size": "S",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -293,7 +307,7 @@
   },
   {
     "name": "German Shepherd Dog",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/5/54/Berger_allemand_en_montagne_2.jpg",
     "description": "",
     "size": "L",
     "goodWithKids": "yes",
@@ -307,7 +321,7 @@
   },
   {
     "name": "German Shorthaired Pointer",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/3/38/Duitse_staande_korthaar_10-10-2.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "yes",
@@ -321,7 +335,7 @@
   },
   {
     "name": "Golden Retriever",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/9/93/Golden_Retriever_Carlos_%2810581910556%29.jpg",
     "description": "",
     "size": "L",
     "goodWithKids": "yes",
@@ -335,7 +349,7 @@
   },
   {
     "name": "Great Dane",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/f/f1/Vala_in_grass.jpg",
     "description": "",
     "size": "XL",
     "goodWithKids": "supervised",
@@ -349,7 +363,7 @@
   },
   {
     "name": "Great Pyrenees",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Great_Pyrenees_Mountain_Dog.jpg",
     "description": "",
     "size": "XL",
     "goodWithKids": "supervised",
@@ -363,7 +377,7 @@
   },
   {
     "name": "Greyhound",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Greyhound...JPG",
     "description": "",
     "size": "L",
     "goodWithKids": "supervised",
@@ -377,7 +391,7 @@
   },
   {
     "name": "Italian Greyhound",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/4/4a/IG_Valerka.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "older",
@@ -390,8 +404,8 @@
     "group": "toy"
   },
   {
-    "name": "Jack Russel Terrier",
-    "photo": "",
+    "name": "Jack Russell Terrier",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/7/77/Jack_Russell_Terrier_in_Park.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "supervised",
@@ -405,7 +419,35 @@
   },
   {
     "name": "Labrador Retriever",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/3/33/3labradorcols.jpg",
+    "description": "",
+    "size": "L",
+    "goodWithKids": "yes",
+    "goodWithDogs": "yes",
+    "trainability": "easy",
+    "grooming": "free",
+    "shedding": "high",
+    "activityLevel": "high",
+    "barking": "medium",
+    "group": "sporting"
+  },
+  {
+    "name": "Black Labrador Retriever",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/3/33/3labradorcols.jpg",
+    "description": "",
+    "size": "L",
+    "goodWithKids": "yes",
+    "goodWithDogs": "yes",
+    "trainability": "easy",
+    "grooming": "free",
+    "shedding": "high",
+    "activityLevel": "high",
+    "barking": "medium",
+    "group": "sporting"
+  },
+  {
+    "name": "Chocolate Labrador Retriever",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/3/33/3labradorcols.jpg",
     "description": "",
     "size": "L",
     "goodWithKids": "yes",
@@ -419,7 +461,7 @@
   },
   {
     "name": "Maltese",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/8/86/Maltese_puppy.jpeg",
     "description": "",
     "size": "S",
     "goodWithKids": "supervised",
@@ -433,7 +475,7 @@
   },
   {
     "name": "Mastiff",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Westgort_Anticipation_17_months.JPG",
     "description": "",
     "size": "XL",
     "goodWithKids": "yes",
@@ -447,7 +489,7 @@
   },
   {
     "name": "Newfoundland",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Ohle01.jpg",
     "description": "",
     "size": "XL",
     "goodWithKids": "yes",
@@ -461,7 +503,7 @@
   },
   {
     "name": "Norwich Terrier",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/65/A_Norwich_Terrier.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "yes",
@@ -475,7 +517,7 @@
   },
   {
     "name": "Papillon",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Outdoor_Continental_Toy_Spaniel_Papillon.jpeg",
     "description": "",
     "size": "S",
     "goodWithKids": "yes",
@@ -489,7 +531,7 @@
   },
   {
     "name": "Pekingese",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/2/24/1AKC_Pekingese_Dog_Show_2011.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "older",
@@ -503,7 +545,7 @@
   },
   {
     "name": "Pit Bull Terrier",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/4/46/American_Pitbull_001.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "yes",
@@ -517,7 +559,7 @@
   },
   {
     "name": "Pomeranian",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Pomeranian_orange_sable_600.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "supervised",
@@ -531,7 +573,7 @@
   },
   {
     "name": "Poodle",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Full_attention_%288067543690%29.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "yes",
@@ -545,7 +587,7 @@
   },
   {
     "name": "Pug",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Mops-duke-mopszucht-vom-maegdebrunnen.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "supervised",
@@ -559,7 +601,7 @@
   },
   {
     "name": "Rottweiler",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/7/74/%22Prince%22_%287369763074%29.jpg",
     "description": "",
     "size": "L",
     "goodWithKids": "older",
@@ -573,7 +615,7 @@
   },
   {
     "name": "Saint Bernard",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/64/Hummel_Vedor_vd_Robandahoeve.jpg",
     "description": "",
     "size": "XL",
     "goodWithKids": "yes",
@@ -587,7 +629,7 @@
   },
   {
     "name": "Shiba Inu",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Taka_Shiba.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "older",
@@ -601,7 +643,7 @@
   },
   {
     "name": "Siberian Husky",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Black-Magic-Big-Boy.jpg",
     "description": "",
     "size": "M",
     "goodWithKids": "supervised",
@@ -615,7 +657,7 @@
   },
   {
     "name": "Fox Terrier",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Two_Fox_Terriers.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "yes",
@@ -629,7 +671,7 @@
   },
   {
     "name": "Wheaten Terrier",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Wheaten_terrier.JPG",
     "description": "",
     "size": "S",
     "goodWithKids": "supervised",
@@ -643,7 +685,7 @@
   },
   {
     "name": "Yorkshire Terrier",
-    "photo": "",
+    "photo": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Holly_the_Yorkshire_Terrier.jpg",
     "description": "",
     "size": "S",
     "goodWithKids": "supervised",

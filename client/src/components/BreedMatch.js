@@ -15,7 +15,7 @@ const BreedMatch = props => {
           <div className="row">
 
             <div className="col-md-6 text-center mb-3">
-              <img className="img-fluid"
+              <img className="img-fluid rounded"
                 alt={props.dogInfo.name}
                 src={props.dogInfo.photo}
               />

@@ -75,12 +75,14 @@ class Questions extends Component {
         filteredList = this.questionSeven();
         break;
       case 8:
-        filteredList = this.questionSeven();
+        filteredList = this.questionEight();
         break;
       default:
         filteredList = [...this.state.filteredList];
         break;
     }
+
+
     // console.log(filteredList);
     if (this.state.counter < 10) {
       this.setState({
@@ -88,7 +90,18 @@ class Questions extends Component {
         filteredList: filteredList
       });
     }
+
+    // console.log(filteredList);
+    // if (this.state.counter < 10 && this.state.filteredList.length > 1) {
+    //   this.setState({
+    //     counter: this.state.counter + 1,
+    //     filteredList: filteredList
+    //   });
+    // } else {
+    //   this.submitSurvey();
+    // }
   };
+
   answerSelected = (questionID, item) => {
     // console.log("answer selected");
     var answers = [...this.state.survey_answers];
@@ -102,6 +115,30 @@ class Questions extends Component {
   questionZero = () => {
     var dogs = [...this.state.filteredList];
     switch (this.state.survey_answers[0]) {
+      case "small: 3-30 lbs":
+        return dogs.filter(dog => {
+          return dog.size === "S";
+        });
+      case "medium: 20-60 lbs":
+        return dogs.filter(dog => {
+          return dog.size === "M";
+        });
+      case "large: 50-100 lbs":
+        return dogs.filter(dog => {
+          return dog.size === "L";
+        });
+      case "extra-large: 100+ lbs":
+        return dogs.filter(dog => {
+          return dog.size === "XL" || dog.size === "L";
+        });
+      default:
+        return dogs;
+    }
+  };
+
+  questionOne = () => {
+    var dogs = [...this.state.filteredList];
+    switch (this.state.survey_answers[1]) {
       case "currently have have a dog(s)":
         return dogs.filter(dog => {
           return (
@@ -117,12 +154,12 @@ class Questions extends Component {
     }
   };
 
-  questionOne = () => {
+  questionTwo = () => {
     var dogs = [...this.state.filteredList];
-    switch (this.state.survey_answers[1]) {
+    switch (this.state.survey_answers[2]) {
       case "apartment":
         return dogs.filter(dog => {
-          return dog.size === "S" || dog.size === "M";
+          return dog.size === "S" || dog.size === "M" || dog.size === "L" || dog.activityLevel === "low";
         });
       case "house with small yard":
         return dogs.filter(dog => {
@@ -133,9 +170,9 @@ class Questions extends Component {
     }
   };
 
-  questionTwo = () => {
+  questionThree = () => {
     var dogs = [...this.state.filteredList];
-    switch (this.state.survey_answers[2]) {
+    switch (this.state.survey_answers[3]) {
       case "0-10 years old":
         return dogs.filter(dog => {
           return (
@@ -155,9 +192,9 @@ class Questions extends Component {
     }
   };
 
-  questionThree = () => {
+  questionFour = () => {
     var dogs = [...this.state.filteredList];
-    switch (this.state.survey_answers[3]) {
+    switch (this.state.survey_answers[4]) {
       case "minimal to none":
         return dogs.filter(dog => {
           return dog.shedding === "low" || dog.shedding === "none";
@@ -175,9 +212,9 @@ class Questions extends Component {
     }
   };
 
-  questionFour = () => {
+  questionFive = () => {
     var dogs = [...this.state.filteredList];
-    switch (this.state.survey_answers[4]) {
+    switch (this.state.survey_answers[5]) {
       case "minimal":
         return dogs.filter(dog => {
           return dog.barking === "low";
@@ -191,9 +228,9 @@ class Questions extends Component {
     }
   };
 
-  questionFive = () => {
+  questionSix = () => {
     var dogs = [...this.state.filteredList];
-    switch (this.state.survey_answers[5]) {
+    switch (this.state.survey_answers[6]) {
       case "couch potato":
         return dogs.filter(dog => {
           return dog.activityLevel === "low";
@@ -207,18 +244,6 @@ class Questions extends Component {
           return (
             dog.activityLevel === "high" || dog.activityLevel === "very high"
           );
-        });
-      default:
-        return dogs;
-    }
-  };
-
-  questionSix = () => {
-    var dogs = [...this.state.filteredList];
-    switch (this.state.survey_answers[6]) {
-      case "yes":
-        return dogs.filter(dog => {
-          return dog.size === "S";
         });
       default:
         return dogs;
@@ -254,7 +279,7 @@ class Questions extends Component {
   };
 
   submitSurvey = event => {
-    event.preventDefault();
+    // event.preventDefault();
     // let filteredList;
 
     this.setState({

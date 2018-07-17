@@ -46,7 +46,7 @@ const Dogs = props => {
                       <div className="col-md-6">
                         {pet.media.photos.photo.length === 5 ? (
                           <img
-                            className="img-fluid my-1 w-100"
+                            className="img-fluid my-1 w-100 rounded"
                             alt="dog"
                             src={pet.media.photos.photo[3].$t}
                             style={{ maxHeight : "760px"}}

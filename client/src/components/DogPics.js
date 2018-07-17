@@ -75,7 +75,7 @@ class DogPics extends Component {
                 <CarouselItem key={index} data-interval="false" itemId={index}>
                   <View>
                     <img
-                      className="d-block my-1 w-100"
+                      className="d-block my-1 rounded w-100"
                       src={photo.$t}
                       alt="First slide"
                       style={{ maxHeight: "760px"}}
