@@ -41,15 +41,15 @@ const Dogs = props => {
                   className="card-body"
                   style={{ maxHeight: "800px"}}
                 >
-                  <div className="row">
+                  <div className="row align-items-center">
                     {pet.media.photos ? (
-                      <div className="col-md-6 text-center">
+                      <div className="col-md-6">
                         {pet.media.photos.photo.length === 5 ? (
                           <img
-                            className="img-fluid"
+                            className="img-fluid my-1 w-100"
                             alt="dog"
                             src={pet.media.photos.photo[3].$t}
-                            style={{ height: "auto", width: "100%" }}
+                            style={{ maxHeight : "760px"}}
                           />
                         ) : (
                           <DogPics
@@ -97,7 +97,7 @@ const Dogs = props => {
                       )}
                       {/* <h5>breed(s): {pet.breeds.breed[0].$t} {pet.breeds.breed[1].$t} {pet.breeds.breed[3].$t}</h5> */}
                       <div
-                        style={{ maxHeight: "250px", overflow: "scroll" }}
+                        style={{ "maxHeight" : "592px", "overflow" : "scroll" }}
                         className="mt-4 text-justify w-100"
                       >
                         {pet.description.$t}

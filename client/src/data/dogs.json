@@ -44,6 +44,7 @@
   {
     "name": "Australian Shepherd",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001303/Australian-Shepherd-On-White-08.jpg",
+    "description": "The Australian Shepherd, the cowboy’s herding dog of choice, is a medium-sized worker with a keen, penetrating gaze in the eye. Aussie coats offer different looks, including merle (a mottled pattern with contrasting shades of blue or red). In all ways, they’re the picture of rugged and agile movers of stock. Aussies exhibit an irresistible impulse to herd, anything: birds, dogs, kids. This strong work drive can make Aussies too much dog for a sedentary pet owner. Aussies are remarkably intelligent, quite capable of hoodwinking an unsuspecting novice owner. In short, this isn’t the pet for everyone. But if you’re looking for a brainy, tireless, and trainable partner for work or sport, your search might end here.",
     "size": "M",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -57,6 +58,7 @@
   {
     "name": "Basset Hound",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001049/Basset-Hound-On-White-01.jpg",
+    "description": "The Basset Hound stands no higher than 14 inches at the shoulder but, with his remarkably heavy bone, powerful little legs, and massive paws, he possesses big-dog strength and stamina. Bassets are famous for a large, domed head that features extremely long, velvety ears, mournful eyes, and a wrinkled brow, which give the breed the look of a sad clown. Built more for endurance than speed, the Basset moves in a deliberate but effortless manner. The breed’s scenting ability is uncanny; it’s said that among dogs only the Bloodhound’s nose is more accurate. Mild and agreeable at home, the Basset is stubborn on the trail and barks in a loud, ringing voice. Although they may not be wildly demonstrative in their affections, they are steadfastly loyal.",
     "size": "M",
     "goodWithKids": "yes",
     "goodWithDogs": "yes",
@@ -70,6 +72,7 @@
   {
     "name": "Beagle",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13001000/Beagle-On-White-01.jpg",
+    "description": "There are two Beagle varieties: those standing under 13 inches at the shoulder, and those between 13 and 15 inches. Both varieties are sturdy, solid, and “big for their inches,” as dog folks say. They come in such pleasing colors as lemon, red and white, and tricolor. The Beagle’s fortune is in his adorable face, with its big brown or hazel eyes set off by long, houndy ears set low on a broad head. A breed described as “merry” by its fanciers, Beagles are loving and lovable, happy, and companionable—all qualities that make them excellent family dogs. No wonder that for years the Beagle has been the most popular hound dog among American pet owners. These are curious, clever, and energetic hounds who require plenty of playtime.",
     "size": "S",
     "goodWithKids": "yes",
     "goodWithDogs": "yes",
@@ -83,6 +86,7 @@
   {
     "name": "Bernese Mountain Dog",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/13000440/Bernese-Mountain-Dog-On-White-01.jpg",
+    "description": "The Bernese Mountain Dog is a large, sturdy worker who can stand over 27 inches at the shoulder. The thick, silky, and moderately long coat is tricolored: jet black, clear white, and rust. The distinctive markings on the coat and face are breed hallmarks and, combined with the intelligent gleam in the dark eyes, add to the Berner’s aura of majestic nobility. A hardy dog who thrives in cold weather, the Berner’s brain and brawn helped him multitask on the farms and pastures of Switzerland. Berners get along with the entire family and are particularly gentle with children, but they will often become more attached to one lucky human. Berners are imposing but not threatening, and they maintain an aloof dignity with strangers.",
     "size": "XL",
     "goodWithKids": "supervised",
     "goodWithDogs": "yes",
@@ -96,6 +100,7 @@
   {
     "name": "Border Collie",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12235957/Border-Collie-On-White-01.jpg",
+    "description": "Borders are athletic, medium-sized herders standing 18 to 22 inches at the shoulder. The overall look is that of a muscular but nimble worker unspoiled by passing fads. Both the rough coat and the smooth coat come in a variety of colors and patterns. The almond eyes are the focus of an intelligent expression—an intense gaze, the Border’s famous “herding eye”, is a breed hallmark. On the move, Borders are among the canine kingdom’s most agile, balanced, and durable citizens. The intelligence, athleticism, and trainability of Borders have a perfect outlet in agility training. Having a job to perform, like agility—or herding or obedience work—is key to Border happiness. Amiable among friends, they may be reserved with strangers.",
     "size": "M",
     "goodWithKids": "older",
     "goodWithDogs": "supervised",
@@ -109,6 +114,7 @@
   {
     "name": "Boston Terrier",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12235809/Boston-Terrier-On-White-01.jpg",
+    "description": "Boston Terriers are compact, short-tailed, well-balanced little dogs weighing no more than 25 pounds. The stylish “tuxedo” coat can be white and either black, brindle, or seal (dark brown). The head is square, the muzzle is short, and the large, round eyes can shine with kindness, curiosity, or mischief. Ever alert to their surroundings, Bostons move with a jaunty, rhythmic step. It’s a safe bet that a breed named for a city—the Havanese or Brussels Griffon, for instance—will make an excellent urban pet. Bostons are no exception: they are sturdy but portable, people-oriented, and always up for a brisk walk to the park or outdoor cafe. A bright dog with a natural gift for comedy, the dapper Bostonian is a steady source of smiles.",
     "size": "S",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -122,6 +128,7 @@
   {
     "name": "Boxer",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12235639/Boxer-On-White-03.jpg",
+    "description": "A well-made Boxer in peak condition is an awesome sight. A male can stand as high as 25 inches at the shoulder; females run smaller. Their muscles ripple beneath a short, tight-fitting coat. The dark brown eyes and wrinkled forehead give the face an alert, curious look. The coat can be fawn or brindle, with white markings. Boxers move like the athletes they are named for: smooth and graceful, with a powerful forward thrust. Boxers are upbeat and playful. Their patience and protective nature have earned them a reputation as a great dog with children. They take the jobs of watchdog and family guardian seriously and will meet threats fearlessly. Boxers do best when exposed to a lot of people and other animals in early puppyhood.",
     "size": "L",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -135,6 +142,7 @@
   {
     "name": "Brittany Spaniel",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/19033403/Brittany-1.jpg",
+    "description": "Brittanys are smaller than setters but leggier than spaniels, standing about 20 inches at the shoulder. Their beautiful, boldly patterned coat comes in combinations of white and vivid orange and liver (reddish-brown). They are rugged and strong but smooth, clean, and quick afoot. The face has the “softness” prized by bird-dog lovers; high-set ears convey the breed’s essential eagerness. The zeal and versatility that make Brittanys peerless hunters can be channeled into dog sports. Obedience, agility, flyball, dock diving—you name it, this trainable breed is up for it. The Brittany is a nice fit for those seeking an all-purpose hunting partner, a dog-sport teammate, or a companion in sync with an upbeat, outdoorsy family life.",
     "size": "M",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -148,6 +156,7 @@
   {
     "name": "Brussels Griffon",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12235422/Brussels-Griffon-On-White-01.jpg",
+    "description": "With this breed, you get a big personality in a 5-to-15-pound package. One look into his big, human-like eyes, and you’ll be smitten. Griffs come in four colors—red, black-and-reddish-brown (called belge), black and tan, and black—and in smooth coats (like a Pug) or rough coats (like a Schnauzer). Their black muzzle and whiskers earned them the nickname “bearded dogs” in old folk songs.The Griff’s big black eyes—described as “almost human”—coupled with a fringed beard and mustache covering his short muzzle, gives him the air of a worldly, French-speaking philosopher. Griffs come in four colors—red, black-and-reddish-brown (called belge), black and tan, and black—and in smooth coats or rough coats. The Griff’s body is thickset and sturdy, and he moves with the purposeful trot of a fellow who knows what he wants. Griffs are alert, sociable, and easily trained. Although playful and energetic, their small size and sensitive nature make them a poor choice as roughhousing playmates for kids. They have a low threshold for loneliness and will stick close to their special human, providing years of love and laughter.",
     "size": "S",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -161,6 +170,7 @@
   {
     "name": "Bulldog",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/06014400/bulldog-on-skateboard-grinning.jpg",
+    "description": "You can’t mistake a Bulldog for any other breed. The loose skin of the head, furrowed brow, pushed-in nose, small ears, undershot jaw with hanging chops on either side, and the distinctive rolling gait all practically scream “I’m a Bulldog!” The coat, seen in a variety of colors and patterns, is short, smooth, and glossy. Bulldogs can weigh up to 50 pounds, but that won’t stop them from curling up in your lap, or at least trying to. But don’t mistake their easygoing ways for laziness—Bulldogs enjoy brisk walks and need regular moderate exercise, along with a careful diet, to stay trim. Summer afternoons are best spent in an air-conditioned room as a Bulldog’s short snout can cause labored breathing in hot and humid weather.",
     "size": "M",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -174,6 +184,7 @@
   {
     "name": "Corgi",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12225919/Pembroke-Welsh-Corgi-On-White-01.jpg",
+    "description": "",
     "size": "S",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -187,6 +198,7 @@
   {
     "name": "Cavalier King Charles Spaniel",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12234928/Cavalier-King-Charles-Spaniel-On-White-01.jpg",
+    "description": "",
     "size": "S",
     "goodWithKids": "yes",
     "goodWithDogs": "yes",
@@ -200,6 +212,7 @@
   {
     "name": "Chihuahua",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12234710/Chihuahua-On-White-03.jpg",
+    "description": "",
     "size": "S",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -213,6 +226,7 @@
   {
     "name": "Collie",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12234244/Collie-On-White-01.jpg",
+    "description": "",
     "size": "M",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -226,6 +240,7 @@
   {
     "name": "Dachshund",
     "photo": "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/12234114/Dachshund-On-White-01.jpg",
+    "description": "",
     "size": "S",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -239,6 +254,7 @@
   {
     "name": "Dalmatian",
     "photo": "",
+    "description": "",
     "size": "M",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -252,6 +268,7 @@
   {
     "name": "English Setter",
     "photo": "",
+    "description": "",
     "size": "M",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -278,6 +295,7 @@
   {
     "name": "German Shepherd Dog",
     "photo": "",
+    "description": "",
     "size": "L",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -291,6 +309,7 @@
   {
     "name": "German Shorthaired Pointer",
     "photo": "",
+    "description": "",
     "size": "M",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -304,6 +323,7 @@
   {
     "name": "Golden Retriever",
     "photo": "",
+    "description": "",
     "size": "L",
     "goodWithKids": "yes",
     "goodWithDogs": "yes",
@@ -317,6 +337,7 @@
   {
     "name": "Great Dane",
     "photo": "",
+    "description": "",
     "size": "XL",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -330,6 +351,7 @@
   {
     "name": "Great Pyrenees",
     "photo": "",
+    "description": "",
     "size": "XL",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -343,6 +365,7 @@
   {
     "name": "Greyhound",
     "photo": "",
+    "description": "",
     "size": "L",
     "goodWithKids": "supervised",
     "goodWithDogs": "yes",
@@ -356,6 +379,7 @@
   {
     "name": "Italian Greyhound",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "older",
     "goodWithDogs": "yes",
@@ -369,6 +393,7 @@
   {
     "name": "Jack Russel Terrier",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "supervised",
     "goodWithDogs": "yes",
@@ -382,6 +407,7 @@
   {
     "name": "Labrador Retriever",
     "photo": "",
+    "description": "",
     "size": "L",
     "goodWithKids": "yes",
     "goodWithDogs": "yes",
@@ -395,6 +421,7 @@
   {
     "name": "Maltese",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -408,6 +435,7 @@
   {
     "name": "Mastiff",
     "photo": "",
+    "description": "",
     "size": "XL",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -421,6 +449,7 @@
   {
     "name": "Newfoundland",
     "photo": "",
+    "description": "",
     "size": "XL",
     "goodWithKids": "yes",
     "goodWithDogs": "yes",
@@ -434,6 +463,7 @@
   {
     "name": "Norwich Terrier",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -447,6 +477,7 @@
   {
     "name": "Papillon",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -460,6 +491,7 @@
   {
     "name": "Pekingese",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "older",
     "goodWithDogs": "supervised",
@@ -473,6 +505,7 @@
   {
     "name": "Pit Bull Terrier",
     "photo": "",
+    "description": "",
     "size": "M",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -486,6 +519,7 @@
   {
     "name": "Pomeranian",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -499,6 +533,7 @@
   {
     "name": "Poodle",
     "photo": "",
+    "description": "",
     "size": "M",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -512,6 +547,7 @@
   {
     "name": "Pug",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -525,6 +561,7 @@
   {
     "name": "Rottweiler",
     "photo": "",
+    "description": "",
     "size": "L",
     "goodWithKids": "older",
     "goodWithDogs": "no",
@@ -538,6 +575,7 @@
   {
     "name": "Saint Bernard",
     "photo": "",
+    "description": "",
     "size": "XL",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -551,6 +589,7 @@
   {
     "name": "Shiba Inu",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "older",
     "goodWithDogs": "supervised",
@@ -564,6 +603,7 @@
   {
     "name": "Siberian Husky",
     "photo": "",
+    "description": "",
     "size": "M",
     "goodWithKids": "supervised",
     "goodWithDogs": "yes",
@@ -577,6 +617,7 @@
   {
     "name": "Fox Terrier",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "yes",
     "goodWithDogs": "supervised",
@@ -590,6 +631,7 @@
   {
     "name": "Wheaten Terrier",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
@@ -603,6 +645,7 @@
   {
     "name": "Yorkshire Terrier",
     "photo": "",
+    "description": "",
     "size": "S",
     "goodWithKids": "supervised",
     "goodWithDogs": "supervised",
