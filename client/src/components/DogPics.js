@@ -27,7 +27,7 @@ class DogPics extends Component {
 
     this.state = {
       activeItem: 1,
-      maxLength: this.props.dogPhoto.length -1
+      maxLength: this.props.dogPhoto.length
     };
   }
 
@@ -72,7 +72,7 @@ class DogPics extends Component {
           >
             <CarouselInner>
               {this.props.dogPhoto.map((photo, index) => (
-                <CarouselItem key={index} data-interval="false" itemId={index}>
+                <CarouselItem key={index} data-interval="false" itemId={index + 1}>
                   <View>
                     <img
                       className="d-block my-1 rounded w-100"

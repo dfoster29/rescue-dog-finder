@@ -217,7 +217,7 @@ class Questions extends Component {
     switch (this.state.survey_answers[5]) {
       case "minimal":
         return dogs.filter(dog => {
-          return dog.barking === "low";
+          return dog.barking === "low" || dog.barking === "medium";
         });
       case "here and there":
         return dogs.filter(dog => {
