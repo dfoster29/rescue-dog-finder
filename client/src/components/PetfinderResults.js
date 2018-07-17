@@ -7,8 +7,8 @@ const Dogs = props => {
   if (!props.results.petfinder.pets.pet) {
     console.log("no props here");
     return (
-      <div className="container mt-4">
-        <div className="card">
+      <div className="container">
+        <div className="card component-shadow">
           <div className="card-header text-center">
             <h3>Petfinder Results</h3>
           </div>
@@ -28,7 +28,7 @@ const Dogs = props => {
         <div>
           {props.results.petfinder.pets.pet.map(pet => (
             <div key={pet.id.$t} className="container mt-4">
-              <div className="card">
+              <div className="card component-shadow content-fadein my-5">
                 <div className="card-header text-center">
                   {pet.name ? (
                     <h3>{pet.name.$t}</h3>
@@ -46,10 +46,9 @@ const Dogs = props => {
                       <div className="col-md-6">
                         {pet.media.photos.photo.length === 5 ? (
                           <img
-                            className="img-fluid my-1 w-100 rounded"
+                            className="img-fluid my-1 w-100 rounded petfinder-photo"
                             alt="dog"
                             src={pet.media.photos.photo[3].$t}
-                            style={{ maxHeight : "760px"}}
                           />
                         ) : (
                           <DogPics
@@ -97,8 +96,7 @@ const Dogs = props => {
                       )}
                       {/* <h5>breed(s): {pet.breeds.breed[0].$t} {pet.breeds.breed[1].$t} {pet.breeds.breed[3].$t}</h5> */}
                       <div
-                        style={{ "maxHeight" : "592px", "overflow" : "scroll" }}
-                        className="mt-4 text-justify w-100"
+                        className="mt-4 text-justify w-100 petfinder-description"
                       >
                         {pet.description.$t}
                       </div>

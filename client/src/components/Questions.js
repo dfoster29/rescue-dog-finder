@@ -311,20 +311,21 @@ class Questions extends Component {
         )}
         {!this.state.survey_complete && !this.state.dogResultsFound ? (
           <div className="container mt-4 text-center">
-            <div className="card">
+            <div className="card component-shadow">
               <div className="card-header text-center">
                 <h3>Dog Match Survey</h3>
               </div>
 
               <div>
-                <h3 className="mt-5 mb-3">
+                <h3 className="mt-5 mb-3 mx-2">
                   {QuestionData[this.state.counter].question}
                 </h3>
                 {this.state.QuestionData[this.state.counter].answers.map(
                   (item, id = this.state.counter) => {
                     return (
+                      <div className="m-4">
                       <button
-                        className="btn btn-lg btn-secondary m-4"
+                        className="btn btn-lg btn-secondary m-1"
                         key={id}
                         onClick={() =>
                           this.answerSelected(this.state.counter, item)
@@ -332,20 +333,21 @@ class Questions extends Component {
                       >
                         {item}
                       </button>
+                      </div>
                     );
                   }
                 )}
                 <div className="my-3">
                   {this.state.counter < 8 ? (
                     <button
-                      className="btn btn-lg btn-primary mb-4"
+                      className="btn btn-lg btn-primary mb-4 button-shadow"
                       onClick={this.nextQuestion}
                     >
                       next question
                     </button>
                   ) : (
                     <button
-                      className="btn btn-lg btn-success mb-4"
+                      className="btn btn-lg btn-success mb-4 button-shadow"
                       onClick={event => {
                         this.nextQuestion(event);
                         this.submitSurvey(event);

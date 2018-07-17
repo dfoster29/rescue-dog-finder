@@ -10,18 +10,18 @@ const BreedMatch = props => {
 
         <div className="card-body">
           <div className="text-center">
-            <h1 className="mb-3">{props.dogInfo.name}</h1>
+            <h1 className="mb-3 content-fadein">{props.dogInfo.name}</h1>
           </div>
           <div className="row">
-            <div className="col-md-6 text-center mb-3">
-              <img className="img-fluid rounded component-shadow"
+            <div className="col-md-8 text-center mb-3">
+              <img className="img-fluid rounded content-fadein"
                 alt={props.dogInfo.name}
                 src={props.dogInfo.photo}
               />
 
             </div>
 
-            <div className="col-md-6">
+            <div className="col-md-4">
               <div className="mb-5 text-justify">
                 {props.dogInfo.description}
               </div>

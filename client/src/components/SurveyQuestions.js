@@ -80,13 +80,13 @@ class SurveyQuestions extends Component {
           ) : (
             // <Questions questionprops={this.questionFunctionName}/>
             <div>
-              <div className="container mt-4 text-center">
-                <div className="card">
+              <div className="container text-center my-4">
+                <div className="card component-shadow">
                   <div className="card-header text-center">
                     <h3>Dog Match Survey</h3>
                   </div>
                   <div className="row justify-content-center">
-                    <form className="m-4 w-25">
+                    <form className="m-4 mx-1">
                       <div className="form-group">
                         <input
                           name="zipcode"
@@ -94,15 +94,17 @@ class SurveyQuestions extends Component {
                           placeholder="enter your zip code"
                           type="text"
                           onChange={this.handleOnChange}
-                          className="form-control mb-4"
+                          className="form-control-lg my-4 component-shadow"
                         />
+                        <div>
                         <button
                           type="submit"
-                          className="btn btn-lg btn-success"
+                          className="btn btn-lg btn-success button-shadow my-3"
                           onClick={this.getLatLong}
                         >
                           Submit
                         </button>
+                        </div>
                       </div>
                     </form>
                   </div>

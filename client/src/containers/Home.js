@@ -5,7 +5,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div className="jumbotron">
+        <div className="jumbotron component-shadow">
           <h1 className="text-center mb-4">Welcome to Plenty of Pups</h1>
           <div className="container">
             <p>
@@ -19,7 +19,7 @@ class Home extends Component {
             </p>
             <NavLink className="nav-link" to="/survey">
               <div className="row justify-content-center">
-                <button className="btn btn-lg btn-primary">start survey</button>
+                <button className="btn btn-lg btn-primary button-shadow">start survey</button>
               </div>
             </NavLink>
           </div>
