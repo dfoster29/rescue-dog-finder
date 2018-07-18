@@ -7,107 +7,98 @@ const Dogs = props => {
   if (!props.results.petfinder.pets.pet) {
     console.log("no props here");
     return (
-      <div className="container">
-        <div className="card component-shadow">
-          <div className="card-header text-center">
-            <h3>Petfinder Results</h3>
-          </div>
+      <div className="card component-shadow">
+        <div className="card-header text-center">
+          <h3>Petfinder Results</h3>
+        </div>
 
-          <div className="card-body">
-            <h2 className="text-center mb-4">
-              Sorry. There are currently no dogs on Petfinder that match this
-              breed.
-            </h2>
-          </div>
+        <div className="card-body">
+          <h2 className="text-center mt-5">
+            Sorry. There are currently no dogs on Petfinder that match this
+            breed.
+          </h2>
         </div>
       </div>
     );
   } else {
     return (
       <div>
-        <div>
-          {props.results.petfinder.pets.pet.map(pet => (
-            <div key={pet.id.$t} className="container mt-4">
-              <div className="card component-shadow content-fadein my-5">
-                <div className="card-header text-center">
-                  {pet.name ? (
-                    <h3>{pet.name.$t}</h3>
-                  ) : (
-                    <h3>(no name listed)</h3>
-                  )}
-                </div>
+        {props.results.petfinder.pets.pet.map(pet => (
+          <div
+            key={pet.id.$t}
+            className="card component-shadow content-fadein mb-5"
+          >
+            <div className="card-header text-center">
+              {pet.name ? <h3>{pet.name.$t}</h3> : <h3>(no name listed)</h3>}
+            </div>
 
-                <div
-                  className="card-body"
-                  style={{ maxHeight: "800px"}}
-                >
-                  <div className="row align-items-center">
-                    {pet.media.photos ? (
-                      <div className="col-md-6">
-                        {pet.media.photos.photo.length === 5 ? (
-                          <img
-                            className="img-fluid my-1 w-100 rounded petfinder-photo"
-                            alt="dog"
-                            src={pet.media.photos.photo[3].$t}
-                          />
-                        ) : (
-                          <DogPics
-                            dogPhoto={pet.media.photos.photo.filter(
-                              photo => photo["@size"] === "x"
-                            )}
-                          />
-                        )}
-                      </div>
+            <div className="card-body p-3" style={{ maxHeight: "800px" }}>
+              <div className="row align-items-center">
+                {pet.media.photos ? (
+                  <div className="col-md-6 text-center">
+                    {pet.media.photos.photo.length === 5 ? (
+                      <img
+                        className="img-fluid w-100 rounded petfinder-photo"
+                        alt="dog"
+                        src={pet.media.photos.photo[3].$t}
+                      />
                     ) : (
-                      <div className="col-md-6">
-                        <img
-                          className="img-fluid w-100"
-                          alt="dog"
-                          src="https://www.victoriabox.ca/img/no-product-img.png"
-                        />
-                      </div>
+                      <DogPics
+                        dogPhoto={pet.media.photos.photo.filter(
+                          photo => photo["@size"] === "x"
+                        )}
+                      />
                     )}
-
-                    <div className="col-md-6">
-                      {pet.breeds.breed[0] && pet.breeds.breed[1] ? (
-                        <div>
-                          Breeds: {pet.breeds.breed[0].$t} and{" "}
-                          {pet.breeds.breed[1].$t}
-                        </div>
-                      ) : (
-                        <div>Breed: {pet.breeds.breed.$t}</div>
-                      )}
-
-                      <div>Age: {pet.age.$t}</div>
-                      <div>Sex: {pet.sex.$t}</div>
-                      <div>
-                        Location: {pet.contact.city.$t}, {pet.contact.state.$t}
-                      </div>
-                      <div>
-                        Email:{" "}
-                        <a href={"mailto:" + pet.contact.email.$t}>
-                          {pet.contact.email.$t}
-                        </a>
-                      </div>
-                      {pet.contact.phone.$t ? (
-                        <div>Phone: {pet.contact.phone.$t}</div>
-                      ) : (
-                        <div />
-                      )}
-                      {/* <h5>breed(s): {pet.breeds.breed[0].$t} {pet.breeds.breed[1].$t} {pet.breeds.breed[3].$t}</h5> */}
-                      <div
-                        className="mt-4 text-justify w-100 petfinder-description"
-                      >
-                        {pet.description.$t}
-                      </div>
-                      {/* <p className="text-right">scroll for more info...</p> */}
-                    </div>
                   </div>
+                ) : (
+                  <div className="col-md-6">
+                    <img
+                      className="img-fluid w-100"
+                      alt="dog"
+                      src="https://www.victoriabox.ca/img/no-product-img.png"
+                    />
+                  </div>
+                )}
+
+                <div className="col-md-6">
+                  {pet.breeds.breed[0] && pet.breeds.breed[1] ? (
+                    <div>
+                      <span className="font-weight-bold">Breeds: </span>{pet.breeds.breed[0].$t} and{" "}
+                      {pet.breeds.breed[1].$t}
+                    </div>
+                  ) : (
+                    <div><span className="font-weight-bold">Breed: </span>{pet.breeds.breed.$t}</div>
+                  )}
+
+                  <div><span className="font-weight-bold">Age: </span>{pet.age.$t}</div>
+                  <div><span className="font-weight-bold">Sex: </span>{pet.sex.$t}</div>
+                  <div>
+                    <span className="font-weight-bold">Location: </span>{pet.contact.city.$t}, {pet.contact.state.$t}
+                  </div>
+                  <div>
+                  <span className="font-weight-bold">Email: </span>{" "}
+                    <a href={"mailto:" + pet.contact.email.$t}>
+                      {pet.contact.email.$t}
+                    </a>
+                  </div>
+                  {pet.contact.phone.$t ? (
+                    <div><span className="font-weight-bold">Phone: </span>{pet.contact.phone.$t}</div>
+                  ) : (
+                    <div />
+                  )}
+                  {pet.description.$t ? (
+                    <div className="mt-4 p-3 text-justify component-shadow petfinder-description">
+                    <div className="font-weight-bold">Description:</div>
+                      {pet.description.$t}
+                    </div>
+                  ) : (
+                    <div />
+                  )}
                 </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     );
   }

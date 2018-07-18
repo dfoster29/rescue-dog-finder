@@ -60,7 +60,7 @@ class DogPics extends Component {
   render() {
     // const { activeItem } = this.state;
     return (
-      <Container>
+      <div>
         {/* {this.props.dogPhoto.$t ? (
           <img className="img-fluid" alt="dog" src={this.props.dogPhoto.$t} />
         ) : ( */}
@@ -102,7 +102,7 @@ class DogPics extends Component {
             />
           </Carousel>
         {/* )} */}
-      </Container>
+      </div>
     );
   }
 }

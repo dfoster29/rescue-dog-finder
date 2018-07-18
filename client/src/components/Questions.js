@@ -310,13 +310,13 @@ class Questions extends Component {
           ""
         )}
         {!this.state.survey_complete && !this.state.dogResultsFound ? (
-          <div className="container mt-4 text-center">
+          // <div className="container mx-1 px-0">
             <div className="card component-shadow">
               <div className="card-header text-center">
                 <h3>Dog Match Survey</h3>
               </div>
 
-              <div>
+              <div className="card-body text-center">
                 <h3 className="mt-5 mb-3 mx-2">
                   {QuestionData[this.state.counter].question}
                 </h3>
@@ -347,7 +347,7 @@ class Questions extends Component {
                     </button>
                   ) : (
                     <button
-                      className="btn btn-lg btn-success mb-4 button-shadow"
+                      className="btn btn-lg btn-danger mb-4 button-shadow"
                       onClick={event => {
                         this.nextQuestion(event);
                         this.submitSurvey(event);
@@ -359,7 +359,7 @@ class Questions extends Component {
                 </div>
               </div>
             </div>
-          </div>
+          // </div>
         ) : (
           ""
         )}

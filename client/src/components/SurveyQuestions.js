@@ -73,46 +73,43 @@ class SurveyQuestions extends Component {
 
   render() {
     return (
-      <div>
-        <div className="card-body">
-          {this.state.zip_submitted ? (
-            <Questions zip={this.state.zipcode}/>
-          ) : (
-            // <Questions questionprops={this.questionFunctionName}/>
-            <div>
-              <div className="container text-center my-4">
-                <div className="card component-shadow">
-                  <div className="card-header text-center">
-                    <h3>Dog Match Survey</h3>
+      <div className="container mt-4">
+        {this.state.zip_submitted ? (
+          <Questions zip={this.state.zipcode} />
+        ) : (
+          // <Questions questionprops={this.questionFunctionName}/>
+          <div>
+            <div className="card component-shadow">
+              <div className="card-header text-center">
+                <h3>Dog Match Survey</h3>
+              </div>
+
+              <div className="card-body text-center">
+                <form className="m-4 mx-1">
+                  <div className="form-group">
+                    <input
+                      name="zipcode"
+                      value={this.state.zipcode}
+                      placeholder="enter your zip code"
+                      type="text"
+                      onChange={this.handleOnChange}
+                      className="form-control-lg my-4 component-shadow"
+                    />
+                    <div>
+                      <button
+                        type="submit"
+                        className="btn btn-lg btn-success button-shadow my-3"
+                        onClick={this.getLatLong}
+                      >
+                        Submit
+                      </button>
+                    </div>
                   </div>
-                  <div className="row justify-content-center">
-                    <form className="m-4 mx-1">
-                      <div className="form-group">
-                        <input
-                          name="zipcode"
-                          value={this.state.zipcode}
-                          placeholder="enter your zip code"
-                          type="text"
-                          onChange={this.handleOnChange}
-                          className="form-control-lg my-4 component-shadow"
-                        />
-                        <div>
-                        <button
-                          type="submit"
-                          className="btn btn-lg btn-success button-shadow my-3"
-                          onClick={this.getLatLong}
-                        >
-                          Submit
-                        </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
+                </form>
               </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     );
   }
