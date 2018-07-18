@@ -5,8 +5,7 @@ import {
   CarouselInner,
   CarouselItem,
   View,
-  Mask,
-  Container
+  Mask
 } from "mdbreact";
 
 class DogPics extends Component {
@@ -72,7 +71,7 @@ class DogPics extends Component {
           >
             <CarouselInner>
               {this.props.dogPhoto.map((photo, index) => (
-                <CarouselItem key={index} data-interval="false" itemId={index + 1}>
+                <CarouselItem key={index} data-interval="false" itemId={index + 1} className="component-shadow">
                   <View>
                     <img
                       className="d-block my-1 rounded w-100"

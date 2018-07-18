@@ -10,12 +10,10 @@ class Home extends Component {
           <div className="container">
             <p>
               Here at Plenty of Pups we hope to match you with your
-              furever friend. Upon completetion of a survey you will be matched
+              furever friend. Upon completion of the survey you will be matched
               with a breed of dog best suited for your current lifestyle and
               living situation. You will then be shown dogs of this breed that
-              are currently available for adoption on Petfinder. In addition to
-              available dogs, you can easily search for nearby pet stores, dog
-              parks, and veterinary offices.
+              are currently available for adoption on Petfinder.com .
             </p>
             <NavLink className="nav-link" to="/survey">
               <div className="row justify-content-center">

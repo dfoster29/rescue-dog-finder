@@ -38,7 +38,7 @@ const Dogs = props => {
                   <div className="col-md-6 text-center">
                     {pet.media.photos.photo.length === 5 ? (
                       <img
-                        className="img-fluid w-100 rounded petfinder-photo"
+                        className="img-fluid w-100 rounded component-shadow"
                         alt="dog"
                         src={pet.media.photos.photo[3].$t}
                       />

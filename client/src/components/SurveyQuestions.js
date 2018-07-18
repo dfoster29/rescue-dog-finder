@@ -73,7 +73,7 @@ class SurveyQuestions extends Component {
 
   render() {
     return (
-      <div className="container mt-4">
+      <div className="container my-4">
         {this.state.zip_submitted ? (
           <Questions zip={this.state.zipcode} />
         ) : (
@@ -85,7 +85,7 @@ class SurveyQuestions extends Component {
               </div>
 
               <div className="card-body text-center">
-                <form className="m-4 mx-1">
+                <form className="m-4">
                   <div className="form-group">
                     <input
                       name="zipcode"

@@ -48,6 +48,7 @@ class Questions extends Component {
   nextQuestion = event => {
     event.preventDefault();
     let filteredList;
+    const previousList = [...this.state.filteredList]
 
     switch (this.state.counter) {
       case 0:
@@ -82,13 +83,21 @@ class Questions extends Component {
         break;
     }
 
-
     // console.log(filteredList);
     if (this.state.counter < 10) {
-      this.setState({
-        counter: this.state.counter + 1,
-        filteredList: filteredList
-      });
+      if (filteredList.length) {
+        this.setState({
+          counter: this.state.counter + 1,
+          filteredList: filteredList,
+          previousList: previousList
+        });
+      } else {
+        this.setState({
+          counter: this.state.counter + 1,
+          filteredList: previousList,
+          previousList: previousList
+        });
+      }
     }
 
     // console.log(filteredList);
@@ -114,6 +123,7 @@ class Questions extends Component {
 
   questionZero = () => {
     var dogs = [...this.state.filteredList];
+    // var prevDogs = [...this.state.filteredList];
     switch (this.state.survey_answers[0]) {
       case "small: 3-30 lbs":
         return dogs.filter(dog => {
@@ -159,7 +169,12 @@ class Questions extends Component {
     switch (this.state.survey_answers[2]) {
       case "apartment":
         return dogs.filter(dog => {
-          return dog.size === "S" || dog.size === "M" || dog.size === "L" || dog.activityLevel === "low";
+          return (
+            dog.size === "S" ||
+            dog.size === "M" ||
+            dog.size === "L" ||
+            dog.activityLevel === "low"
+          );
         });
       case "house with small yard":
         return dogs.filter(dog => {
@@ -311,55 +326,54 @@ class Questions extends Component {
         )}
         {!this.state.survey_complete && !this.state.dogResultsFound ? (
           // <div className="container mx-1 px-0">
-            <div className="card component-shadow">
-              <div className="card-header text-center">
-                <h3>Dog Match Survey</h3>
-              </div>
+          <div className="card component-shadow">
+            <div className="card-header text-center">
+              <h3>Dog Match Survey</h3>
+            </div>
 
-              <div className="card-body text-center">
-                <h3 className="mt-5 mb-3 mx-2">
-                  {QuestionData[this.state.counter].question}
-                </h3>
+            <div className="card-body text-center">
+              <h3 className="my-4 mx-2">
+                {QuestionData[this.state.counter].question}
+              </h3>
                 {this.state.QuestionData[this.state.counter].answers.map(
                   (item, id = this.state.counter) => {
                     return (
-                      <div className="m-4">
-                      <button
-                        className="btn btn-lg btn-secondary m-1"
-                        key={id}
-                        onClick={() =>
-                          this.answerSelected(this.state.counter, item)
-                        }
-                      >
-                        {item}
-                      </button>
+                      <div key={id}>
+                        <button
+                          className="btn btn-lg btn-secondary my-2"
+                          key={id}
+                          onClick={() =>
+                            this.answerSelected(this.state.counter, item)
+                          }
+                        >
+                          {item}
+                        </button>
                       </div>
                     );
                   }
                 )}
-                <div className="my-3">
-                  {this.state.counter < 8 ? (
-                    <button
-                      className="btn btn-lg btn-primary mb-4 button-shadow"
-                      onClick={this.nextQuestion}
-                    >
-                      next question
-                    </button>
-                  ) : (
-                    <button
-                      className="btn btn-lg btn-danger mb-4 button-shadow"
-                      onClick={event => {
-                        this.nextQuestion(event);
-                        this.submitSurvey(event);
-                      }}
-                    >
-                      show breed match
-                    </button>
-                  )}
-                </div>
-              </div>
+
+
+              {this.state.counter < 8 ? (
+                <button
+                  className="btn btn-lg btn-primary my-4 button-shadow"
+                  onClick={this.nextQuestion}
+                >
+                  next question
+                </button>
+              ) : (
+                <button
+                  className="btn btn-lg btn-danger my-4 button-shadow"
+                  onClick={event => {
+                    this.nextQuestion(event);
+                    this.submitSurvey(event);
+                  }}
+                >
+                  show breed match
+                </button>
+              )}
             </div>
-          // </div>
+          </div>
         ) : (
           ""
         )}
