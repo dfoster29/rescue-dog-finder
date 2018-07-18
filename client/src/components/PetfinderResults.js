@@ -38,9 +38,10 @@ const Dogs = props => {
                   <div className="col-md-6 text-center">
                     {pet.media.photos.photo.length === 5 ? (
                       <img
-                        className="img-fluid w-100 rounded component-shadow"
+                        className="img-fluid w-100 rounded component-shadow petfinder-photo"
                         alt="dog"
                         src={pet.media.photos.photo[3].$t}
+
                       />
                     ) : (
                       <DogPics
@@ -87,9 +88,11 @@ const Dogs = props => {
                     <div />
                   )}
                   {pet.description.$t ? (
-                    <div className="mt-4 p-3 text-justify component-shadow petfinder-description">
-                    <div className="font-weight-bold">Description:</div>
+                    <div>
+                    <div className="font-weight-bold">Details:</div>
+                    <div className="p-2 text-justify component-shadow petfinder-description">
                       {pet.description.$t}
+                    </div>
                     </div>
                   ) : (
                     <div />

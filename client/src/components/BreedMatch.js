@@ -21,10 +21,10 @@ const BreedMatch = props => {
           </div>
 
           <div className="col-md-4">
-            <div className="mb-5 text-justify">{props.dogInfo.description}</div>
+            {/* <div className="mb-5 text-justify">{props.dogInfo.description}</div> */}
             <div className="text-center">
               <button
-                className="btn btn-lg btn-secondary mb-4 button-shadow"
+                className="btn btn-lg btn-secondary mb-3 button-shadow"
                 onClick={props.searchPetfinder}
               >
                 show Petfinder results

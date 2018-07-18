@@ -98,8 +98,13 @@
 
 @media only screen and (max-width: 600px) {
   .petfinder-description {
-     height: 100px;
+     max-height: 100px;
      overflow: scroll;
+     margin-top: 5px;
+  }
+  .petfinder-photo {
+    max-height: 500px;
+    margin: auto;
   }
 }
 
