@@ -8,7 +8,7 @@ class Home extends Component {
         <div className="jumbotron component-shadow">
           <h1 className="text-center mb-4">Welcome to Plenty of Pups</h1>
           <div className="container">
-            <p>
+            <p className="text-justify">
               Here at Plenty of Pups we hope to match you with your
               furever friend. Upon completion of the survey you will be matched
               with a breed of dog best suited for your current lifestyle and

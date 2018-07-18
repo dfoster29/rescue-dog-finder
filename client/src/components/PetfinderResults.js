@@ -90,7 +90,7 @@ const Dogs = props => {
                   {pet.description.$t ? (
                     <div>
                     <div className="font-weight-bold">Details:</div>
-                    <div className="p-2 text-justify component-shadow petfinder-description">
+                    <div className="p-2 text-justify description-text component-shadow petfinder-description">
                       {pet.description.$t}
                     </div>
                     </div>
