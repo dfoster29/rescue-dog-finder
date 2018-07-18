@@ -85,27 +85,29 @@ class SurveyQuestions extends Component {
               </div>
 
               <div className="card-body text-center">
-                <form className="m-4">
-                  <div className="form-group">
-                    <input
-                      name="zipcode"
-                      value={this.state.zipcode}
-                      placeholder="enter your zip code"
-                      type="text"
-                      onChange={this.handleOnChange}
-                      className="form-control-lg my-4 component-shadow"
-                    />
-                    <div>
-                      <button
-                        type="submit"
-                        className="btn btn-lg btn-success button-shadow my-3"
-                        onClick={this.getLatLong}
-                      >
-                        Submit
-                      </button>
+                <div className="my-4">
+                  <form>
+                    <div className="form-group text-center">
+                      <input
+                        name="zipcode"
+                        value={this.state.zipcode}
+                        placeholder="enter your zip code"
+                        type="text"
+                        onChange={this.handleOnChange}
+                        className="form-control-lg my-4 component-shadow"
+                      />
+                      <div>
+                        <button
+                          type="submit"
+                          className="btn btn-lg btn-secondary button-shadow my-3"
+                          onClick={this.getLatLong}
+                        >
+                          Submit
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
           </div>

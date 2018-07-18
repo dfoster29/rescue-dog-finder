@@ -7,7 +7,7 @@
   {
     "question": "2: What is your previous dog experience?",
     "id": 1,
-    "answers": ["have never owned a dog", "owned a dog in the past", "currently have have a dog(s)"]
+    "answers": ["have never owned a dog", "owned a dog in the past", "currently have a dog(s)"]
   },
   {
     "question": "3: Which best describes your current living situation?",

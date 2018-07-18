@@ -24,7 +24,7 @@ const BreedMatch = props => {
             <div className="mb-5 text-justify">{props.dogInfo.description}</div>
             <div className="text-center">
               <button
-                className="btn btn-lg btn-danger mb-4 button-shadow"
+                className="btn btn-lg btn-secondary mb-4 button-shadow"
                 onClick={props.searchPetfinder}
               >
                 show Petfinder results

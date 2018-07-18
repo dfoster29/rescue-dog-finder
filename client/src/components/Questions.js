@@ -149,7 +149,7 @@ class Questions extends Component {
   questionOne = () => {
     var dogs = [...this.state.filteredList];
     switch (this.state.survey_answers[1]) {
-      case "currently have have a dog(s)":
+      case "currently have a dog(s)":
         return dogs.filter(dog => {
           return (
             dog.goodWithDogs === "yes" || dog.goodWithDogs === "supervised"
@@ -339,7 +339,7 @@ class Questions extends Component {
                     return (
                       <div key={id}>
                         <button
-                          className="btn btn-lg btn-secondary my-2"
+                          className="btn btn-lg btn-light my-2"
                           key={id}
                           onClick={() =>
                             this.answerSelected(this.state.counter, item)
@@ -362,7 +362,7 @@ class Questions extends Component {
                 </button>
               ) : (
                 <button
-                  className="btn btn-lg btn-danger my-4 button-shadow"
+                  className="btn btn-lg btn-secondary my-4 button-shadow"
                   onClick={event => {
                     this.nextQuestion(event);
                     this.submitSurvey(event);
