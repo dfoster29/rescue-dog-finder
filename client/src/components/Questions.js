@@ -172,7 +172,6 @@ class Questions extends Component {
           return (
             dog.size === "S" ||
             dog.size === "M" ||
-            dog.size === "L" ||
             dog.activityLevel === "low"
           );
         });
@@ -257,7 +256,7 @@ class Questions extends Component {
       case "daily excercise":
         return dogs.filter(dog => {
           return (
-            dog.activityLevel === "high" || dog.activityLevel === "very high"
+            dog.activityLevel === "high" || dog.activityLevel === "very high" || dog.activityLevel === "medium"
           );
         });
       default:
