@@ -32,7 +32,7 @@ const Dogs = props => {
               {pet.name ? <h3>{pet.name.$t}</h3> : <h3>(no name listed)</h3>}
             </div>
 
-            <div className="card-body p-3" style={{ maxHeight: "800px" }}>
+            <div className="card-body p-3">
               <div className="row align-items-center">
                 {pet.media.photos ? (
                   <div className="col-md-6 text-center">

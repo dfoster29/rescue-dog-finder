@@ -13,6 +13,16 @@
   transform: translate(0px, -10px) scale(1.1);
 } */
 
+.answer-buttons:hover {
+  background-color: black;
+  color: white;
+}
+
+.answer-buttons:focus {
+  background-color: black;
+  color: white;
+}
+
 .content-fadein {
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 3s; /* Firefox < 16 */
@@ -50,45 +60,8 @@
   to   { opacity: 1; }
 }
 
-.content-fadeout {
-  -webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadeout 2s; /* Firefox < 16 */
-      -ms-animation: fadeout 2s; /* Internet Explorer */
-       -o-animation: fadeout 2s; /* Opera < 12.1 */
-          animation: fadeout 2s;
-}
-
-@keyframes fadeout {
-  from { opacity: 1; }
-  to   { opacity: 0; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadeout {
-  from { opacity: 1; }
-  to   { opacity: 0; }
-}
-
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadeout {
-  from { opacity: 1; }
-  to   { opacity: 0; }
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadeout {
-  from { opacity: 1; }
-  to   { opacity: 0; }
-}
-
-/* Opera < 12.1 */
-@-o-keyframes fadeout {
-  from { opacity: 1; }
-  to   { opacity: 0; }
-}
-
 .petfinder-photo {
-   max-height: 760px;
+   max-height: 800px;
 }
 
 .petfinder-description {
@@ -101,10 +74,6 @@
      max-height: 100px;
      overflow: scroll;
      margin-top: 5px;
-  }
-  .petfinder-photo {
-    max-height: 500px;
-    margin: auto;
   }
 }
 

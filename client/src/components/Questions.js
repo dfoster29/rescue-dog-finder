@@ -339,7 +339,7 @@ class Questions extends Component {
                     return (
                       <div key={id}>
                         <button
-                          className="btn btn-lg btn-light my-2"
+                          className="btn btn-lg btn-light my-2 answer-buttons button-shadow"
                           key={id}
                           onClick={() =>
                             this.answerSelected(this.state.counter, item)
