@@ -17,27 +17,27 @@
   {
     "question": "4: Do any children live in your home? If yes, approximately how old are they?",
     "id": 3,
-    "answers": ["no", "0-10 years old", "10+ years old"]
+    "answers": ["no", "0-10 years old", "10-15 years old", "15+ years old"]
   },
   {
-    "question": "5: What amount of shedding will you tolerate?",
+    "question": "5: Which activity best describes what you're looking for in a dog?",
     "id": 4,
+    "answers": ["movie viewing partner", "daily walks around the neighborhood", "running/workout partner"]
+  },
+  {
+    "question": "6: What amount of shedding will you tolerate?",
+    "id": 5,
     "answers": ["minimal to none", "moderate shedding", "heavy or seasonal shedding"]
   },
   {
-    "question": "6: What amount of barking will you tolerate?",
-    "id": 5,
+    "question": "7: What amount of barking will you tolerate?",
+    "id": 6,
     "answers": ["minimal", "here and there", "likes to be vocal"]
   },
   {
-    "question": "7: How active are you?",
-    "id": 6,
-    "answers": ["couch potato", "excercise here and there", "daily excercise"]
-  },
-  {
-    "question": "8: How much time can you commit to training your new dog?",
+    "question": "8: How much time can you commit to training your new dog each day?",
     "id": 7,
-    "answers": ["1-4 hours per week", "4-9 hours per week", "10 or more hours per week"]
+    "answers": ["30-60 minutes", "1-2 hours", "2+ hours"]
   },
   {
     "question": "9: Are you willing to pay to have your dog groomed?",

@@ -193,7 +193,7 @@ class Questions extends Component {
             dog.goodWithKids === "yes" || dog.goodWithKids === "supervised"
           );
         });
-      case "10+ years old":
+      case "10-15 years old":
         return dogs.filter(dog => {
           return (
             dog.goodWithKids === "older" ||
@@ -209,6 +209,28 @@ class Questions extends Component {
   questionFour = () => {
     var dogs = [...this.state.filteredList];
     switch (this.state.survey_answers[4]) {
+      case "movie viewing buddy":
+        return dogs.filter(dog => {
+          return dog.activityLevel === "low";
+        });
+      case "daily walks around the neighborhood":
+        return dogs.filter(dog => {
+          return dog.activityLevel === "medium" || dog.activityLevel === "low";
+        });
+      case "running/workout partner":
+        return dogs.filter(dog => {
+          return (
+            dog.activityLevel === "high" || dog.activityLevel === "very high"
+          );
+        });
+      default:
+        return dogs;
+    }
+  };
+
+  questionFive = () => {
+    var dogs = [...this.state.filteredList];
+    switch (this.state.survey_answers[5]) {
       case "minimal to none":
         return dogs.filter(dog => {
           return dog.shedding === "low" || dog.shedding === "none";
@@ -226,9 +248,9 @@ class Questions extends Component {
     }
   };
 
-  questionFive = () => {
+  questionSix = () => {
     var dogs = [...this.state.filteredList];
-    switch (this.state.survey_answers[5]) {
+    switch (this.state.survey_answers[6]) {
       case "minimal":
         return dogs.filter(dog => {
           return dog.barking === "low" || dog.barking === "medium";
@@ -242,36 +264,14 @@ class Questions extends Component {
     }
   };
 
-  questionSix = () => {
-    var dogs = [...this.state.filteredList];
-    switch (this.state.survey_answers[6]) {
-      case "couch potato":
-        return dogs.filter(dog => {
-          return dog.activityLevel === "low";
-        });
-      case "excercise here and there":
-        return dogs.filter(dog => {
-          return dog.activityLevel === "medium" || dog.activityLevel === "low";
-        });
-      case "daily excercise":
-        return dogs.filter(dog => {
-          return (
-            dog.activityLevel === "high" || dog.activityLevel === "very high" || dog.activityLevel === "medium"
-          );
-        });
-      default:
-        return dogs;
-    }
-  };
-
   questionSeven = () => {
     var dogs = [...this.state.filteredList];
     switch (this.state.survey_answers[7]) {
-      case "1-4 hours per week":
+      case "30-60 minutes":
         return dogs.filter(dog => {
           return dog.trainability === "easy";
         });
-      case "4-9 hours per week":
+      case "1-2 hours":
         return dogs.filter(dog => {
           return dog.trainability === "easy" || dog.trainability === "medium";
         });

@@ -1,3 +1,9 @@
+body {
+  background-image: url("./images/dog_background.jpg");
+  background-repeat: repeat;
+  background-size: 800px;
+}
+
 .component-shadow {
   box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
 }
@@ -14,13 +20,11 @@
 } */
 
 .answer-buttons:hover {
-  background-color: black;
-  color: white;
+  background-color: #CED3DC;
 }
 
 .answer-buttons:focus {
-  background-color: black;
-  color: white;
+  background-color: #CED3DC;
 }
 
 .content-fadein {
@@ -74,6 +78,10 @@
      max-height: 100px;
      overflow: scroll;
      margin-top: 5px;
+  }
+  body {
+    background-size: 100vw;
+    background-repeat: repeat;
   }
 }
 

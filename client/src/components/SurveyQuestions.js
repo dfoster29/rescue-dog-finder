@@ -85,7 +85,8 @@ class SurveyQuestions extends Component {
               </div>
 
               <div className="card-body text-center">
-                <div className="my-4">
+              <div>(zip code will be used for Petfinder results)</div>
+                <div className="mt-2 mb-4">
                   <form>
                     <div className="form-group text-center">
                       <input
