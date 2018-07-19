@@ -331,7 +331,7 @@ class Questions extends Component {
             </div>
 
             <div className="card-body text-center">
-              <h3 className="my-4 mx-2">
+              <h3 className="question-text my-2 mx-2">
                 {QuestionData[this.state.counter].question}
               </h3>
                 {this.state.QuestionData[this.state.counter].answers.map(
@@ -355,20 +355,20 @@ class Questions extends Component {
 
               {this.state.counter < 8 ? (
                 <button
-                  className="btn btn-lg btn-primary my-4 button-shadow"
+                  className="btn btn-lg btn-primary mt-3 mb-2 button-shadow"
                   onClick={this.nextQuestion}
                 >
                   next question
                 </button>
               ) : (
                 <button
-                  className="btn btn-lg btn-secondary my-4 button-shadow"
+                  className="btn btn-lg btn-secondary mt-5 mb-4 button-shadow"
                   onClick={event => {
                     this.nextQuestion(event);
                     this.submitSurvey(event);
                   }}
                 >
-                  show breed match
+                  show survey results
                 </button>
               )}
             </div>
