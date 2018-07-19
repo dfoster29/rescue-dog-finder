@@ -11,13 +11,13 @@ const BreedMatch = props => {
         <div className="text-center">
           <h1 className="mb-3 content-fadein">{props.dogInfo.name}</h1>
         </div>
-        <div className="text-center">
+
           <img
-            className="breedmatch-image img-fluid p-2 rounded content-fadein"
+            className="breedmatch-image img-fluid m-2 rounded content-fadein component-shadow"
             alt={props.dogInfo.name}
             src={props.dogInfo.photo}
           />
-        </div>
+
 
         <div className="text-center">
           <button
