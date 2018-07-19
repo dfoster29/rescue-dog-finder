@@ -22,7 +22,7 @@
   {
     "question": "5: Which activity best describes what you're looking for in a dog?",
     "id": 4,
-    "answers": ["movie viewing partner", "daily walks around the neighborhood", "running/workout partner"]
+    "answers": ["movie viewing partner", "daily walks", "running/workout partner"]
   },
   {
     "question": "6: What amount of shedding will you tolerate?",
