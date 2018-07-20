@@ -4,7 +4,7 @@ const BreedMatch = props => {
   return (
     <div className="card component-shadow">
       <div className="card-header text-center">
-        <h3>Your closest breed match is:</h3>
+        <h3>Your closest match is:</h3>
       </div>
 
       <div className="card-body text-center">

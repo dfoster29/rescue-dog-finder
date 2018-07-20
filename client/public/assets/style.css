@@ -2,6 +2,7 @@ body {
   background-image: url("./images/dog_background.jpg");
   background-repeat: repeat;
   background-size: 800px;
+  background-attachment: fixed;
 }
 
 .jumbotron {
