@@ -38,10 +38,5 @@
     "question": "8: How much time can you commit to training your new dog each day?",
     "id": 7,
     "answers": ["30-60 minutes", "1-2 hours", "2+ hours"]
-  },
-  {
-    "question": "9: Are you willing to pay to have your dog groomed?",
-    "id": 8,
-    "answers": ["yes", "no"]
   }
 ]

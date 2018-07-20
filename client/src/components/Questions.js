@@ -84,7 +84,7 @@ class Questions extends Component {
     }
 
     // console.log(filteredList);
-    if (this.state.counter < 10) {
+    if (this.state.counter < 9) {
       if (filteredList.length) {
         this.setState({
           counter: this.state.counter + 1,
@@ -325,7 +325,7 @@ class Questions extends Component {
         )}
         {!this.state.survey_complete && !this.state.dogResultsFound ? (
           // <div className="container mx-1 px-0">
-          <div className="card component-shadow">
+          <div className="card question-card component-shadow">
             <div className="card-header text-center">
               <h3>Dog Match Survey</h3>
             </div>
@@ -353,7 +353,7 @@ class Questions extends Component {
                 )}
 
 
-              {this.state.counter < 8 ? (
+              {this.state.counter < 7 ? (
                 <button
                   className="btn btn-lg btn-primary mt-3 mb-2 button-shadow"
                   onClick={this.nextQuestion}

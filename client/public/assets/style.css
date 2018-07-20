@@ -25,11 +25,15 @@ body {
 } */
 
 .answer-buttons:hover {
-  background-color: #CED3DC;
+  background-color: rgb(94, 96, 100);
+  border-color: rgb(94, 96, 100);
+  color: white;
 }
 
 .answer-buttons:focus {
-  background-color: #CED3DC;
+  background-color: rgb(94, 96, 100);
+  color: white;
+  border-color: rgb(94, 96, 100);
 }
 
 .content-fadein {
@@ -93,6 +97,17 @@ body {
   }
   .question-text {
     font-size: 23px;
+  }
+  .question-card {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   margin-left: 0px;
+  }
+  .container {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
