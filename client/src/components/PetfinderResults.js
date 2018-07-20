@@ -29,7 +29,13 @@ const Dogs = props => {
             className="card component-shadow content-fadein mb-5"
           >
             <div className="card-header text-center">
-              {pet.name ? <h3>{pet.name.$t}</h3> : <h3>(no name listed)</h3>}
+              {pet.name ? (
+                <h3 className="col-md-11">{pet.name.$t}</h3>
+              ) : (
+                <div>
+                  <h3>(no name listed)</h3>
+                </div>
+              )}
             </div>
 
             <div className="card-body p-3">
@@ -41,7 +47,6 @@ const Dogs = props => {
                         className="img-fluid w-100 rounded component-shadow petfinder-photo"
                         alt="dog"
                         src={pet.media.photos.photo[3].$t}
-
                       />
                     ) : (
                       <DogPics
@@ -64,35 +69,48 @@ const Dogs = props => {
                 <div className="col-md-6">
                   {pet.breeds.breed[0] && pet.breeds.breed[1] ? (
                     <div>
-                      <span className="font-weight-bold">Breeds: </span>{pet.breeds.breed[0].$t} and{" "}
-                      {pet.breeds.breed[1].$t}
+                      <span className="font-weight-bold">Breeds: </span>
+                      {pet.breeds.breed[0].$t} and {pet.breeds.breed[1].$t}
                     </div>
                   ) : (
-                    <div><span className="font-weight-bold">Breed: </span>{pet.breeds.breed.$t}</div>
+                    <div>
+                      <span className="font-weight-bold">Breed: </span>
+                      {pet.breeds.breed.$t}
+                    </div>
                   )}
 
-                  <div><span className="font-weight-bold">Age: </span>{pet.age.$t}</div>
-                  <div><span className="font-weight-bold">Sex: </span>{pet.sex.$t}</div>
                   <div>
-                    <span className="font-weight-bold">Location: </span>{pet.contact.city.$t}, {pet.contact.state.$t}
+                    <span className="font-weight-bold">Age: </span>
+                    {pet.age.$t}
                   </div>
                   <div>
-                  <span className="font-weight-bold">Email: </span>{" "}
+                    <span className="font-weight-bold">Sex: </span>
+                    {pet.sex.$t}
+                  </div>
+                  <div>
+                    <span className="font-weight-bold">Location: </span>
+                    {pet.contact.city.$t}, {pet.contact.state.$t}
+                  </div>
+                  <div>
+                    <span className="font-weight-bold">Email: </span>{" "}
                     <a href={"mailto:" + pet.contact.email.$t}>
                       {pet.contact.email.$t}
                     </a>
                   </div>
                   {pet.contact.phone.$t ? (
-                    <div><span className="font-weight-bold">Phone: </span>{pet.contact.phone.$t}</div>
+                    <div>
+                      <span className="font-weight-bold">Phone: </span>
+                      {pet.contact.phone.$t}
+                    </div>
                   ) : (
                     <div />
                   )}
                   {pet.description.$t ? (
                     <div>
-                    <div className="font-weight-bold">Details:</div>
-                    <div className="p-2 text-justify description-text component-shadow petfinder-description">
-                      {pet.description.$t}
-                    </div>
+                      <div className="font-weight-bold">Details:</div>
+                      <div className="p-2 text-justify description-text component-shadow petfinder-description">
+                        {pet.description.$t}
+                      </div>
                     </div>
                   ) : (
                     <div />

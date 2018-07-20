@@ -107,3 +107,7 @@ body {
 .breedmatch-image {
   max-height: 550px;
 }
+
+.card {
+  border: none;
+}
