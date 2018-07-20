@@ -98,17 +98,6 @@ body {
   .question-text {
     font-size: 23px;
   }
-  .question-card {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   margin-left: 0px;
-  }
-  .container {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 }
 
 .card-header {
