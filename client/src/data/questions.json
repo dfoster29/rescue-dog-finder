@@ -15,9 +15,9 @@
     "answers": ["apartment", "house with small yard", "house with large yard"]
   },
   {
-    "question": "4: Do any children live in your home? If yes, approximately how old are they?",
+    "question": "4: Do any children live in your home? If yes, approximately how old is the youngest?",
     "id": 3,
-    "answers": ["no", "0-10 years old", "10-15 years old", "15+ years old"]
+    "answers": ["no children", "0-10 years old", "10-15 years old", "15+ years old"]
   },
   {
     "question": "5: Which activity best describes what you're looking for in a dog?",

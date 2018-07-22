@@ -331,15 +331,15 @@ class Questions extends Component {
             </div>
 
             <div className="card-body text-center">
-              <h3 className="question-text my-2 mx-2">
+              <h4 className="question-text my-2 mx-2">
                 {QuestionData[this.state.counter].question}
-              </h3>
+              </h4>
                 {this.state.QuestionData[this.state.counter].answers.map(
                   (item, id = this.state.counter) => {
                     return (
                       <div key={id}>
                         <button
-                          className="btn btn-lg btn-light my-2 answer-buttons button-shadow"
+                          className="btn btn-light my-2 answer-buttons button-shadow"
                           key={id}
                           onClick={() =>
                             this.answerSelected(this.state.counter, item)
