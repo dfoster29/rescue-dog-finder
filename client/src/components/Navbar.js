@@ -13,9 +13,15 @@ const Navbar = () => (
         {/* <li className="nav-item">
           <NavLink className="nav-link" to="/saved_dogs">Saved Dogs</NavLink>
         </li> */}
-        {/* <li className="nav-item">
-          <NavLink className="nav-link" to="/survey">Survey</NavLink>
-        </li> */}
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/petstores">Pet Stores</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/vetoffices">Vet Offices</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/dogparks">Dog Parks</NavLink>
+        </li>
       </ul>
     </div>
     <div className="justify-content-right text-white">powered by 

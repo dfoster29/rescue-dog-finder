@@ -48,7 +48,7 @@ class Questions extends Component {
   nextQuestion = event => {
     event.preventDefault();
     let filteredList;
-    const previousList = [...this.state.filteredList]
+    const previousList = [...this.state.filteredList];
 
     switch (this.state.counter) {
       case 0:
@@ -172,12 +172,13 @@ class Questions extends Component {
           return (
             dog.size === "S" ||
             dog.size === "M" ||
-            dog.activityLevel === "low"
+            dog.size === "L" ||
+            dog.size === "XL"
           );
         });
       case "house with small yard":
         return dogs.filter(dog => {
-          return dog.size === "S" || dog.size === "M" || dog.size === "L";
+          return dog.size === "S" || dog.size === "M" || dog.size === "L" || dog.size === "XL";
         });
       default:
         return dogs;
@@ -209,11 +210,11 @@ class Questions extends Component {
   questionFour = () => {
     var dogs = [...this.state.filteredList];
     switch (this.state.survey_answers[4]) {
-      case "movie viewing buddy":
+      case "movie viewing partner":
         return dogs.filter(dog => {
           return dog.activityLevel === "low";
         });
-      case "daily walks around the neighborhood":
+      case "daily walks":
         return dogs.filter(dog => {
           return dog.activityLevel === "medium" || dog.activityLevel === "low";
         });
@@ -334,24 +335,23 @@ class Questions extends Component {
               <h4 className="question-text my-2 mx-2">
                 {QuestionData[this.state.counter].question}
               </h4>
-                {this.state.QuestionData[this.state.counter].answers.map(
-                  (item, id = this.state.counter) => {
-                    return (
-                      <div key={id}>
-                        <button
-                          className="btn btn-light my-2 answer-buttons button-shadow"
-                          key={id}
-                          onClick={() =>
-                            this.answerSelected(this.state.counter, item)
-                          }
-                        >
-                          {item}
-                        </button>
-                      </div>
-                    );
-                  }
-                )}
-
+              {this.state.QuestionData[this.state.counter].answers.map(
+                (item, id = this.state.counter) => {
+                  return (
+                    <div key={id}>
+                      <button
+                        className="btn btn-light my-2 answer-buttons button-shadow"
+                        key={id}
+                        onClick={() =>
+                          this.answerSelected(this.state.counter, item)
+                        }
+                      >
+                        {item}
+                      </button>
+                    </div>
+                  );
+                }
+              )}
 
               {this.state.counter < 7 ? (
                 <button
