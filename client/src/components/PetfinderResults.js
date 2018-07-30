@@ -23,6 +23,14 @@ const Dogs = props => {
   } else {
     return (
       <div>
+        <div className="card component-shadow content-fadein mb-4">
+          <div className="card-header text-center">
+            <h3 className="col-md-11">
+              <span>There are </span>{props.results.petfinder.pets.pet.length}<span> available dogs</span>
+            </h3>
+          </div>
+        </div>
+
         {props.results.petfinder.pets.pet.map(pet => (
           <div
             key={pet.id.$t}

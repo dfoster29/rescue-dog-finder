@@ -23,7 +23,7 @@ const BreedMatch = props => {
               className="btn btn-lg btn-secondary my-3 button-shadow"
               onClick={props.searchPetfinder}
             >
-              show Petfinder results
+              click here for Petfinder results
             </button>
           </div>
         </div>
