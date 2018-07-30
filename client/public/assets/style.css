@@ -36,6 +36,10 @@ body {
   border-color: rgb(94, 96, 100);
 }
 
+.btn-primary:focus {
+  color: white;
+}
+
 .content-fadein {
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 3s; /* Firefox < 16 */
