@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
   Carousel,
-  CarouselControl,
   CarouselInner,
   CarouselItem,
   View,
@@ -63,42 +62,50 @@ class DogPics extends Component {
         {/* {this.props.dogPhoto.$t ? (
           <img className="img-fluid" alt="dog" src={this.props.dogPhoto.$t} />
         ) : ( */}
-          <Carousel
-            activeItem={this.state.activeItem}
-            next={this.next}
-            className="z-depth-1"
-            interval={false}
-          >
-            <CarouselInner>
-              {this.props.dogPhoto.map((photo, index) => (
-                <CarouselItem key={index} data-interval="false" itemId={index + 1}>
-                  <View>
-                    <img
-                      className="d-block rounded w-100 petfinder-photo"
-                      src={photo.$t}
-                      alt="First slide"
-                    />
-                    <Mask overlay="black-light" />
-                  </View>
-                </CarouselItem>
-              ))}
-            </CarouselInner>
+        <Carousel
+          activeItem={this.state.activeItem}
+          next={this.next}
+          className="z-depth-1"
+          interval={false}
+        >
+          <CarouselInner>
+            {this.props.dogPhoto.map((photo, index) => (
+              <CarouselItem
+                key={index}
+                data-interval="false"
+                itemId={index + 1}
+              >
+                <View>
+                  <img
+                    className="rounded petfinder-photo"
+                    src={photo.$t}
+                    alt="First slide"
+                  />
+                  <Mask overlay="black-light" />
+                </View>
+              </CarouselItem>
+            ))}
+          </CarouselInner>
 
-            <CarouselControl
-              direction="prev"
-              role="button"
-              onClick={() => {
-                this.prev();
-              }}
-            />
-            <CarouselControl
-              direction="next"
-              role="button"
-              onClick={() => {
-                this.next();
-              }}
-            />
-          </Carousel>
+          <button
+            className="btn btn-light m-1 px-5"
+            direction="prev"
+            onClick={() => {
+              this.prev();
+            }}
+          >
+            <i class="fas fa-arrow-left" />
+          </button>
+          <button
+            className="btn btn-light m-1 px-5"
+            direction="next"
+            onClick={() => {
+              this.next();
+            }}
+          >
+            <i class="fas fa-arrow-right" />
+          </button>
+        </Carousel>
         {/* )} */}
       </div>
     );

@@ -25,8 +25,10 @@ const Dogs = props => {
       <div>
         <div className="card component-shadow content-fadein mb-4">
           <div className="card-header text-center">
-            <h3 className="col-md-11">
-              <span>There are </span>{props.results.petfinder.pets.pet.length}<span> available dogs</span>
+            <h3 className="col-md-12">
+              <span>There are </span>
+              {props.results.petfinder.pets.pet.length}
+              <span> available dogs</span>
             </h3>
           </div>
         </div>
@@ -36,23 +38,15 @@ const Dogs = props => {
             key={pet.id.$t}
             className="card component-shadow content-fadein mb-5"
           >
-            <div className="card-header text-center">
-              {pet.name ? (
-                <h3 className="col-md-11">{pet.name.$t}</h3>
-              ) : (
-                <div>
-                  <h3>(no name listed)</h3>
-                </div>
-              )}
-            </div>
+            <div className="card-header text-center" />
 
             <div className="card-body p-3">
               <div className="row align-items-center">
                 {pet.media.photos ? (
-                  <div className="col-md-6 text-center">
+                  <div className="col-md-7 text-center">
                     {pet.media.photos.photo.length === 5 ? (
                       <img
-                        className="img-fluid w-100 rounded component-shadow petfinder-photo"
+                        className="img-fluid mb-3 rounded component-shadow petfinder-photo"
                         alt="dog"
                         src={pet.media.photos.photo[3].$t}
                       />
@@ -65,16 +59,24 @@ const Dogs = props => {
                     )}
                   </div>
                 ) : (
-                  <div className="col-md-6">
+                  <div className="col-md-7 text-center">
                     <img
-                      className="img-fluid w-100"
+                      className="img-fluid"
                       alt="dog"
                       src="https://www.victoriabox.ca/img/no-product-img.png"
                     />
                   </div>
                 )}
 
-                <div className="col-md-6">
+                <div className="col-md-5">
+                  {pet.name ? (
+                    <h3 className="text-center mb-4">{pet.name.$t}</h3>
+                  ) : (
+                    <div>
+                      <h3>(no name listed)</h3>
+                    </div>
+                  )}
+
                   {pet.breeds.breed[0] && pet.breeds.breed[1] ? (
                     <div>
                       <span className="font-weight-bold">Breeds: </span>
@@ -113,17 +115,18 @@ const Dogs = props => {
                   ) : (
                     <div />
                   )}
-                  {pet.description.$t ? (
-                    <div>
-                      <div className="font-weight-bold">Details:</div>
-                      <div className="p-2 text-justify description-text component-shadow petfinder-description">
-                        {pet.description.$t}
-                      </div>
-                    </div>
-                  ) : (
-                    <div />
-                  )}
                 </div>
+
+                {pet.description.$t ? (
+                  <div className="col-md-12">
+                    {/* <div className="font-weight-bold">Details:</div> */}
+                    <div className="p-2 text-justify description-text component-shadow petfinder-description">
+                      {pet.description.$t}
+                    </div>
+                  </div>
+                ) : (
+                  <div />
+                )}
               </div>
             </div>
           </div>

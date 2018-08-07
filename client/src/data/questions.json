@@ -20,9 +20,9 @@
     "answers": ["no children", "0-10 years old", "10-15 years old", "15+ years old"]
   },
   {
-    "question": "5: Which activity best describes what you're looking for in a dog?",
+    "question": "5: Which best describes what you're looking for in a dog?",
     "id": 4,
-    "answers": ["movie viewing partner", "daily walks", "running/workout partner"]
+    "answers": ["couch potato", "walking buddy", "running/workout partner"]
   },
   {
     "question": "6: What amount of shedding will you tolerate?",
@@ -35,7 +35,7 @@
     "answers": ["minimal", "here and there", "likes to be vocal"]
   },
   {
-    "question": "8: How much time can you commit to training your new dog each day?",
+    "question": "8: How much time can you devote to your new dog each day?",
     "id": 7,
     "answers": ["30-60 minutes", "1-2 hours", "2+ hours"]
   }

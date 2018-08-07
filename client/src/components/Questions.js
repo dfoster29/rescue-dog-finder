@@ -139,7 +139,7 @@ class Questions extends Component {
         });
       case "extra-large: 100+ lbs":
         return dogs.filter(dog => {
-          return dog.size === "XL" || dog.size === "L";
+          return dog.size === "XL";
         });
       default:
         return dogs;
@@ -210,11 +210,11 @@ class Questions extends Component {
   questionFour = () => {
     var dogs = [...this.state.filteredList];
     switch (this.state.survey_answers[4]) {
-      case "movie viewing partner":
+      case "couch potato":
         return dogs.filter(dog => {
           return dog.activityLevel === "low";
         });
-      case "daily walks":
+      case "walking buddy":
         return dogs.filter(dog => {
           return dog.activityLevel === "medium" || dog.activityLevel === "low";
         });
