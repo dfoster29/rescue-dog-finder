@@ -20,7 +20,8 @@ class Questions extends Component {
       breedMatch: {},
       dogResultsFound: false,
       breedMatched: false,
-      petfinderResults: {}
+      petfinderResults: {},
+      previousList: []
     };
   }
   componentDidMount() {
@@ -43,6 +44,14 @@ class Questions extends Component {
         console.log(res.data);
       })
       .catch(err => console.log(err));
+  };
+
+  prevQuestion = event => {
+    event.preventDefault();
+    this.setState({
+      counter: this.state.counter - 1,
+      filteredList: this.state.previousList
+    });
   };
 
   nextQuestion = event => {
@@ -178,7 +187,12 @@ class Questions extends Component {
         });
       case "house with small yard":
         return dogs.filter(dog => {
-          return dog.size === "S" || dog.size === "M" || dog.size === "L" || dog.size === "XL";
+          return (
+            dog.size === "S" ||
+            dog.size === "M" ||
+            dog.size === "L" ||
+            dog.size === "XL"
+          );
         });
       default:
         return dogs;
@@ -353,7 +367,26 @@ class Questions extends Component {
                 }
               )}
 
-              {this.state.counter < 7 ? (
+              {this.state.counter < 7 && this.state.counter > 0 ? (
+                <div>
+                  <button
+                    className="btn btn-lg btn-danger mt-3 mb-2 mx-3 button-shadow"
+                    onClick={this.prevQuestion}
+                  >
+                    previous question
+                  </button>
+                  <button
+                    className="btn btn-lg btn-primary mt-3 mb-2 mx-3 button-shadow"
+                    onClick={this.nextQuestion}
+                  >
+                    next question
+                  </button>
+                </div>
+              ) : (
+                <div />
+              )}
+
+              {this.state.counter === 0 ? (
                 <button
                   className="btn btn-lg btn-primary mt-3 mb-2 button-shadow"
                   onClick={this.nextQuestion}
@@ -361,15 +394,30 @@ class Questions extends Component {
                   next question
                 </button>
               ) : (
-                <button
-                  className="btn btn-lg btn-secondary mt-5 mb-4 button-shadow"
-                  onClick={event => {
-                    this.nextQuestion(event);
-                    this.submitSurvey(event);
-                  }}
-                >
-                  show survey results
-                </button>
+                <div />
+              )}
+
+              {this.state.counter === 7 ? (
+                <div>
+                  <button
+                    className="btn btn-lg btn-danger mt-3 mb-2 mx-3 button-shadow"
+                    onClick={this.prevQuestion}
+                  >
+                    previous question
+                  </button>
+
+                  <button
+                    className="btn btn-lg btn-secondary mt-3 mb-2 mx-3 button-shadow"
+                    onClick={event => {
+                      this.nextQuestion(event);
+                      this.submitSurvey(event);
+                    }}
+                  >
+                    show survey results
+                  </button>
+                </div>
+              ) : (
+                <div />
               )}
             </div>
           </div>

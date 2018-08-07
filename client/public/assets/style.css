@@ -87,10 +87,11 @@ body {
    /* max-height: 400px;
    min-height: 300px; */
    height: 400px;
+   overflow: hidden;
 }
 
 .petfinder-description {
-  max-height: 275px;
+  max-height: 262px;
   overflow: scroll;
 }
 

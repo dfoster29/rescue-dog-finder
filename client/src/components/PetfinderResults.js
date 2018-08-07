@@ -43,7 +43,7 @@ const Dogs = props => {
             <div className="card-body p-3">
               <div className="row align-items-center">
                 {pet.media.photos ? (
-                  <div className="col-md-7 text-center">
+                  <div className="col-md-7 text-center justify-content-center">
                     {pet.media.photos.photo.length === 5 ? (
                       <img
                         className="img-fluid mb-3 rounded component-shadow petfinder-photo"
