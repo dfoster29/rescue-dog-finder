@@ -77,7 +77,7 @@ class DogPics extends Component {
               >
                 <View>
                   <img
-                    className="rounded petfinder-photo"
+                    className="petfinder-photo"
                     src={photo.$t}
                     alt="First slide"
                   />

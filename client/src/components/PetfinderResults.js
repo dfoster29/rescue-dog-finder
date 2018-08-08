@@ -46,7 +46,7 @@ const Dogs = props => {
                   <div className="col-md-7 text-center justify-content-center">
                     {pet.media.photos.photo.length === 5 ? (
                       <img
-                        className="img-fluid mb-3 rounded component-shadow petfinder-photo"
+                        className="img-fluid mb-3 petfinder-photo"
                         alt="dog"
                         src={pet.media.photos.photo[3].$t}
                       />
@@ -70,7 +70,7 @@ const Dogs = props => {
 
                 <div className="col-md-5">
                   {pet.name ? (
-                    <h3 className="text-center mb-4">{pet.name.$t}</h3>
+                    <h3 className="mb-3">{pet.name.$t}</h3>
                   ) : (
                     <div>
                       <h3>(no name listed)</h3>
@@ -120,7 +120,7 @@ const Dogs = props => {
                 {pet.description.$t ? (
                   <div className="col-md-12">
                     {/* <div className="font-weight-bold">Details:</div> */}
-                    <div className="p-2 text-justify description-text component-shadow petfinder-description">
+                    <div className="m-4 mx-5 text-justify description-text petfinder-description">
                       {pet.description.$t}
                     </div>
                   </div>
