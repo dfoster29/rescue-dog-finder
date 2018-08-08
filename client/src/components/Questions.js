@@ -373,13 +373,13 @@ class Questions extends Component {
                     className="btn btn-lg btn-danger mt-3 mb-2 mx-3 button-shadow"
                     onClick={this.prevQuestion}
                   >
-                    previous question
+                    Previous Question
                   </button>
                   <button
                     className="btn btn-lg btn-primary mt-3 mb-2 mx-3 button-shadow"
                     onClick={this.nextQuestion}
                   >
-                    next question
+                    Next Question
                   </button>
                 </div>
               ) : (
@@ -391,7 +391,7 @@ class Questions extends Component {
                   className="btn btn-lg btn-primary mt-3 mb-2 button-shadow"
                   onClick={this.nextQuestion}
                 >
-                  next question
+                  Next Question
                 </button>
               ) : (
                 <div />
@@ -403,17 +403,17 @@ class Questions extends Component {
                     className="btn btn-lg btn-danger mt-3 mb-2 mx-3 button-shadow"
                     onClick={this.prevQuestion}
                   >
-                    previous question
+                    Previous Question
                   </button>
 
                   <button
-                    className="btn btn-lg btn-secondary mt-3 mb-2 mx-3 button-shadow"
+                    className="btn btn-lg btn-success mt-3 mb-2 mx-3 button-shadow"
                     onClick={event => {
                       this.nextQuestion(event);
                       this.submitSurvey(event);
                     }}
                   >
-                    show survey results
+                    Show Survey Results
                   </button>
                 </div>
               ) : (

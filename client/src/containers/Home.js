@@ -17,7 +17,7 @@ class Home extends Component {
             </p>
             <NavLink className="nav-link" to="/survey">
               <div className="row justify-content-center">
-                <button className="btn btn-lg btn-primary button-shadow">start survey</button>
+                <button className="btn btn-lg btn-primary button-shadow">Go to Survey Page</button>
               </div>
             </NavLink>
           </div>

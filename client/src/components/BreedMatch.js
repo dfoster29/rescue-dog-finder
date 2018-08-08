@@ -20,10 +20,10 @@ const BreedMatch = props => {
 
           <div className="text-center">
             <button
-              className="btn btn-lg btn-secondary my-3 button-shadow"
+              className="btn btn-lg btn-primary my-3 button-shadow"
               onClick={props.searchPetfinder}
             >
-              click here for Petfinder results
+              Click Here for Petfinder Results
             </button>
           </div>
         </div>

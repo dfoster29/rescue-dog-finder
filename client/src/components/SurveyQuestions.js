@@ -100,10 +100,10 @@ class SurveyQuestions extends Component {
                       <div>
                         <button
                           type="submit"
-                          className="btn btn-lg btn-secondary button-shadow my-3"
+                          className="btn btn-lg btn-primary button-shadow my-3"
                           onClick={this.getLatLong}
                         >
-                          Submit
+                          Start Survey
                         </button>
                       </div>
                     </div>
