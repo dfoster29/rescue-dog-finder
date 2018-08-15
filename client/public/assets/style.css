@@ -127,7 +127,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .petfinder-description {
-    max-height: 100px;
+    max-height: 172px;
     overflow-y: scroll;
     margin: 5px 0 0 0;
   }
