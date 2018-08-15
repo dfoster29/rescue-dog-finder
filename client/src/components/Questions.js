@@ -373,13 +373,13 @@ class Questions extends Component {
                     className="btn btn-lg btn-danger mt-3 mb-2 mx-3 button-shadow"
                     onClick={this.prevQuestion}
                   >
-                    Previous Question
+                    Previous
                   </button>
                   <button
                     className="btn btn-lg btn-primary mt-3 mb-2 mx-3 button-shadow"
                     onClick={this.nextQuestion}
                   >
-                    Next Question
+                    Next
                   </button>
                 </div>
               ) : (
@@ -391,7 +391,7 @@ class Questions extends Component {
                   className="btn btn-lg btn-primary mt-3 mb-2 button-shadow"
                   onClick={this.nextQuestion}
                 >
-                  Next Question
+                  Next
                 </button>
               ) : (
                 <div />
@@ -403,7 +403,7 @@ class Questions extends Component {
                     className="btn btn-lg btn-danger mt-3 mb-2 mx-3 button-shadow"
                     onClick={this.prevQuestion}
                   >
-                    Previous Question
+                    Previous
                   </button>
 
                   <button

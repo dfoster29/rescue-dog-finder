@@ -120,7 +120,7 @@ const Dogs = props => {
                 {pet.description.$t ? (
                   <div className="col-md-12">
                     {/* <div className="font-weight-bold">Details:</div> */}
-                    <div className="m-4 mx-5 text-justify description-text petfinder-description">
+                    <div className="text-justify description-text petfinder-description">
                       {pet.description.$t}
                     </div>
                   </div>
