@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 
-class DogParks extends Component {
+class DogPark extends Component {
   state = {
     zip: "",
     zipcode: "",
@@ -108,5 +108,5 @@ class DogParks extends Component {
   }
 }
 
-export default DogParks;
+export default DogPark;
 
