@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import Home from "./containers/Home";
 import Saved from "./containers/Saved";
 import Survey from "./containers/Survey";
+import DogPark from "./components/DogPark";
+import Vets from "./components/Vets";
+import PetStores from "./components/PetStores";
 
 const App = () => (
   <Router>
@@ -13,6 +16,9 @@ const App = () => (
         <Route exact path="/" component={Home}/>
         <Route exact path="/saved_dogs" component={Saved}/>
         <Route exact path="/survey" component={Survey}/>
+        <Route exact path="/dogparks" component={DogPark}/>
+        <Route exact path="/vetoffices" component={Vets}/>
+        <Route exact path="/petstores" component={PetStores}/>
         <Route render={() => (<h1 className="text-center">Page Not Found!</h1>)}/>
       </Switch>
     </div>

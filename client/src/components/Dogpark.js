@@ -1,15 +1,17 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Parks = props => {
-  if (props.dog_parks) {
+class DogParks extends Component {
+  render() {
     return (
-      <div>
-        <button className="btn btn-lg btn-primary" onClick="">
-          search for dogparks
-        </button>
+      <div className="container my-4">
+        <div>
+          <button className="btn btn-lg btn-primary" onClick="">
+            search for dog parks
+          </button>
+        </div>
       </div>
     );
   }
-};
+}
 
-export default Parks;
+export default DogParks;

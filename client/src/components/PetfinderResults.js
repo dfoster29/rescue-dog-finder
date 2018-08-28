@@ -135,22 +135,7 @@ const Dogs = props => {
     );
   }
 
-  // const photos = props.results.petfinder.pets.pet.media.photos.photo.filter(
-  //   photo => photo["@size"] === "x"
-  // );
 };
 
 export default Dogs;
 
-//  pet image: petfinder.pets.pet[i].media.photos.photo[i] @size x
-//               name: petfinder.pets.pet[i].
-//               age: petfinder.pets.pet[i].
-//               sex: petfinder.pets.pet[i].
-//               mix: petfinder.pets.pet[i]. (if mix, display breeds, if not display breed from original search)
-//               breed: petfinder.pets.pet[i].breed.breeds[i]
-//               description: petfinder.pets.pet[i].description
-
-// hard coded links for dog results display
-
-// "http://photos.petfinder.com/photos/pets/42085534/1/?bust=1530712516&width=500&-x.jpg"
-// "http://photos.petfinder.com/photos/pets/42085534/2/?bust=1530712523&width=500&-x.jpg"

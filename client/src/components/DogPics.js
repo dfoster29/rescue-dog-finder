@@ -94,7 +94,7 @@ class DogPics extends Component {
               this.prev();
             }}
           >
-            <i class="fas fa-arrow-left" />
+            <i className="fas fa-arrow-left" />
           </button>
           <button
             className="btn btn-light m-1 px-5"
@@ -103,7 +103,7 @@ class DogPics extends Component {
               this.next();
             }}
           >
-            <i class="fas fa-arrow-right" />
+            <i className="fas fa-arrow-right" />
           </button>
         </Carousel>
         {/* )} */}
