@@ -14,7 +14,7 @@ router
       {
         params: {
           location: `${req.query.lat}, ${req.query.long}`,
-          radius: 5000,
+          radius: 15000,
           type: "pet_store",
           keyword: "dog"
         }

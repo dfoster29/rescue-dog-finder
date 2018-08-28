@@ -15,7 +15,7 @@ router
         params: {
           location:  `${req.query.lat}, ${req.query.long}`,
           type: "veterinary_care",
-          radius: 5000
+          radius: 15000
         }
       })
       .then(function (vetOffices) {

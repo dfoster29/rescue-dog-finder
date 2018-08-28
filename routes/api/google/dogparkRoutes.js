@@ -14,9 +14,8 @@ router
       {
         params: {
           location: `${req.query.lat}, ${req.query.long}`,
-          radius: 5000,
-          type: "park",
-          keyword: "dog"
+          radius: 15000,
+          keyword: "dog park"
         }
       })
       .then(function (dogParks) {

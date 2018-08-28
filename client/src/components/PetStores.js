@@ -53,7 +53,15 @@ class Stores extends Component {
                 >
                   <div className="card-header text-center" />
                   <div className="card-body p-3">
-                  <div>{i.name}</div>
+                    <div>
+                      <h3>{i.name}</h3>
+                    </div>
+                    <div>
+                      <h5>rating: {i.rating}</h5>
+                    </div>
+                    <div>
+                      <h5>{i.vicinity}</h5>
+                    </div>
                   </div>
                 </div>
               ))}
