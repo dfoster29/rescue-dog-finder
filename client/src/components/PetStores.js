@@ -46,14 +46,15 @@ class Stores extends Component {
         <div className="container my-4">
           {this.state.data_returned ? (
             <div>
-              {this.state.pet_stores.results.map((i) => (
+              {this.state.pet_stores.results.map(i => (
                 <div
                   key={i.id}
                   className="card component-shadow content-fadein mb-5"
                 >
-
+                  <div className="card-header text-center" />
+                  <div className="card-body p-3">
                   <div>{i.name}</div>
-
+                  </div>
                 </div>
               ))}
             </div>
