@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./containers/Home";
 import Saved from "./containers/Saved";
 import Survey from "./containers/Survey";
-import DogParks from "./components/DogPark";
+import DogParks from "./components/DogParkComponent";
 import Vets from "./components/Vets";
 import PetStores from "./components/PetStores";
 
