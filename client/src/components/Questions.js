@@ -176,24 +176,6 @@ class Questions extends Component {
   questionTwo = () => {
     var dogs = [...this.state.filteredList];
     switch (this.state.survey_answers[2]) {
-      case "apartment":
-        return dogs.filter(dog => {
-          return (
-            dog.size === "S" ||
-            dog.size === "M" ||
-            dog.size === "L" ||
-            dog.size === "XL"
-          );
-        });
-      case "house with small yard":
-        return dogs.filter(dog => {
-          return (
-            dog.size === "S" ||
-            dog.size === "M" ||
-            dog.size === "L" ||
-            dog.size === "XL"
-          );
-        });
       default:
         return dogs;
     }
