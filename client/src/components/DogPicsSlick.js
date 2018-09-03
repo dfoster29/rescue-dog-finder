@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 
-var imgStyle = {
-  height: "400px",
-  width: "auto"
-}
+// var imgStyle = {
+//   height: "400px",
+//   width: "auto"
+// }
 
 class SimpleSlider extends Component {
   constructor(props) {
@@ -26,14 +26,13 @@ class SimpleSlider extends Component {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      variableWidth: true,
       adaptiveHeight: true
     };
     return (
       <div>
         <Slider {...settings} className="mb-3">
           {this.props.dogPhoto.map((photo, index) => (
-            <img className="img-fluid petfinder-photo" src={photo.$t} key={photo["@id"]} alt="slide" style={imgStyle}/>
+            <img className="img-fluid petfinder-photo" src={photo.$t} key={photo["@id"]} alt="slide" />
           ))}
         </Slider>
       </div>
