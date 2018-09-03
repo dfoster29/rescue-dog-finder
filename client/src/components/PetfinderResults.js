@@ -1,5 +1,6 @@
 import React from "react";
-import DogPics from "./DogPics";
+// import DogPics from "./DogPics";
+import SimpleSlider from "./DogPicsSlick";
 
 const Dogs = props => {
   console.log(props);
@@ -51,7 +52,8 @@ const Dogs = props => {
                         src={pet.media.photos.photo[3].$t}
                       />
                     ) : (
-                      <DogPics
+                      // switched out image carousel
+                      <SimpleSlider
                         dogPhoto={pet.media.photos.photo.filter(
                           photo => photo["@size"] === "x"
                         )}

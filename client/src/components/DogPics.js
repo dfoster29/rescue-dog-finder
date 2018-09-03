@@ -59,12 +59,8 @@ class DogPics extends Component {
     // const { activeItem } = this.state;
     return (
       <div>
-        {/* {this.props.dogPhoto.$t ? (
-          <img className="img-fluid" alt="dog" src={this.props.dogPhoto.$t} />
-        ) : ( */}
         <Carousel
           activeItem={this.state.activeItem}
-          next={this.next}
           className="z-depth-1"
           interval={false}
         >
@@ -106,7 +102,7 @@ class DogPics extends Component {
             <i className="fas fa-arrow-right" />
           </button>
         </Carousel>
-        {/* )} */}
+
       </div>
     );
   }

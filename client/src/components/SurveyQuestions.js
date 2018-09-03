@@ -29,47 +29,47 @@ class SurveyQuestions extends Component {
     })
       .then(res => {
         console.log(res.data);
-        this.getDogParks(res.data.lat, res.data.lng);
+        // this.getDogParks(res.data.lat, res.data.lng);
         this.setState({
-          zip_submitted: true
+          zip_submitted: true,
         });
       })
       .catch(err => console.log(err));
   };
 
-  getDogParks = (lat, long) => {
-    console.log(lat, long);
-    API.getDogPark({
-      lat: lat,
-      long: long
-    }).then(res => {
-      this.getPetStores(lat, long, res.data);
-    });
-  };
+  // getDogParks = (lat, long) => {
+  //   console.log(lat, long);
+  //   API.getDogPark({
+  //     lat: lat,
+  //     long: long
+  //   }).then(res => {
+  //     this.getPetStores(lat, long, res.data);
+  //   });
+  // };
 
-  getPetStores = (lat, long, dogParkData) => {
-    API.getPetStore({
-      lat: lat,
-      long: long
-    }).then(res => {
-      this.getVetOffices(lat, long, dogParkData, res.data);
-    });
-  };
+  // getPetStores = (lat, long, dogParkData) => {
+  //   API.getPetStore({
+  //     lat: lat,
+  //     long: long
+  //   }).then(res => {
+  //     this.getVetOffices(lat, long, dogParkData, res.data);
+  //   });
+  // };
 
-  getVetOffices = (lat, long, dogParkData, petStoreData) => {
-    API.getVetOffice({
-      lat: lat,
-      long: long
-    }).then(res => {
-      this.setState({
-        lat: lat,
-        long: long,
-        dog_parks: dogParkData,
-        pet_stores: petStoreData,
-        vet_offices: res.data
-      });
-    });
-  };
+  // getVetOffices = (lat, long, dogParkData, petStoreData) => {
+  //   API.getVetOffice({
+  //     lat: lat,
+  //     long: long
+  //   }).then(res => {
+  //     this.setState({
+  //       lat: lat,
+  //       long: long,
+  //       dog_parks: dogParkData,
+  //       pet_stores: petStoreData,
+  //       vet_offices: res.data
+  //     });
+  //   });
+  // };
 
   render() {
     return (
