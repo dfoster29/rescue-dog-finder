@@ -1,6 +1,6 @@
 import React from "react";
 // import DogPics from "./DogPics";
-import SimpleSlider from "./DogPicsSlick";
+// import SimpleSlider from "./DogPicsSlick";
 
 const Dogs = props => {
   console.log(props);
@@ -45,20 +45,20 @@ const Dogs = props => {
               <div className="row align-items-center">
                 {pet.media.photos ? (
                   <div className="col-md-7 text-center justify-content-center">
-                    {pet.media.photos.photo.length === 5 ? (
+                    {/* {pet.media.photos.photo.length === 5 ? ( */}
                       <img
                         className="img-fluid mb-3 petfinder-photo"
                         alt="dog"
                         src={pet.media.photos.photo[3].$t}
                       />
-                    ) : (
-                      // switched out image carousel
+                    {/* ) : (
+
                       <SimpleSlider
                         dogPhoto={pet.media.photos.photo.filter(
                           photo => photo["@size"] === "x"
                         )}
                       />
-                    )}
+                    )} */}
                   </div>
                 ) : (
                   <div className="col-md-7 text-center">
