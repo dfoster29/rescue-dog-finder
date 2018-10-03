@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react'
 
 class Stores extends Component {
   state = {
