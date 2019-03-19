@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react'
+import PlacesMap from "../components/PlacesMap";
+
+
+// planning to incorporate the google maps API to display a map for better visualization of locations
+
 
 class Stores extends Component {
   state = {
@@ -47,25 +51,7 @@ class Stores extends Component {
         <div className="container my-4">
           {this.state.data_returned ? (
             <div>
-              {this.state.pet_stores.results.map(i => (
-                <div
-                  key={i.id}
-                  className="card component-shadow content-fadein mb-5"
-                >
-                  <div className="card-header text-center" />
-                  <div className="card-body p-3">
-                    <div>
-                      <h3>{i.name}</h3>
-                    </div>
-                    <div>
-                      <h5>rating: {i.rating}</h5>
-                    </div>
-                    <div>
-                      <h5>{i.vicinity}</h5>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              <PlacesMap />
             </div>
           ) : (
             <div>

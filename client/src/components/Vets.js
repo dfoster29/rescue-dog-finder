@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 
+
+// planning to incorporate the google maps API to display a map for better visualization of locations
+
+
 class Vets extends Component {
   state = {
     zip: "",

@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-// import Parks from "./Dogpark";
-// import Vets from "./Vets";
-// import Stores from "./PetStores";
 import Questions from "./Questions";
 import dogData from "../data/dogs.json";
 
@@ -29,7 +26,7 @@ class SurveyQuestions extends Component {
     })
       .then(res => {
         console.log(res.data);
-        // this.getDogParks(res.data.lat, res.data.lng);
+
         this.setState({
           zip_submitted: true,
         });
@@ -37,47 +34,13 @@ class SurveyQuestions extends Component {
       .catch(err => console.log(err));
   };
 
-  // getDogParks = (lat, long) => {
-  //   console.log(lat, long);
-  //   API.getDogPark({
-  //     lat: lat,
-  //     long: long
-  //   }).then(res => {
-  //     this.getPetStores(lat, long, res.data);
-  //   });
-  // };
-
-  // getPetStores = (lat, long, dogParkData) => {
-  //   API.getPetStore({
-  //     lat: lat,
-  //     long: long
-  //   }).then(res => {
-  //     this.getVetOffices(lat, long, dogParkData, res.data);
-  //   });
-  // };
-
-  // getVetOffices = (lat, long, dogParkData, petStoreData) => {
-  //   API.getVetOffice({
-  //     lat: lat,
-  //     long: long
-  //   }).then(res => {
-  //     this.setState({
-  //       lat: lat,
-  //       long: long,
-  //       dog_parks: dogParkData,
-  //       pet_stores: petStoreData,
-  //       vet_offices: res.data
-  //     });
-  //   });
-  // };
-
   render() {
     return (
       <div className="container my-4">
         {this.state.zip_submitted ? (
           <Questions zip={this.state.zipcode} />
         ) : (
-          // <Questions questionprops={this.questionFunctionName}/>
+
           <div>
             <div className="card component-shadow">
               <div className="card-header text-center">

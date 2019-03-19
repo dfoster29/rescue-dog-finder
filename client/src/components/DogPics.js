@@ -7,6 +7,10 @@ import {
   Mask
 } from "mdbreact";
 
+
+// will be redoing the petfinder result images, to make a better image carousel and to better handle the drastically different image proportions
+
+
 class DogPics extends Component {
   constructor(props) {
     super(props);
